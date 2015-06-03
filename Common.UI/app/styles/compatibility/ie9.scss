@@ -1,0 +1,12 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+
+.lt-ie10 {
+    
+    input[type="text"][disabled], 
+    textarea[disabled],
+    select[disabled] {
+        background-color: #EBEBE4;
+    }
+    
+}

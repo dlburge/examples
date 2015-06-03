@@ -1,0 +1,340 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Allergens page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- custom styles/themes for external libraries -->
+
+    <!-- build:css /styles/themes/jquery-ui/jquery-ui.css -->
+    <link rel="stylesheet" href="/styles/themes/jquery-ui/jquery-ui-1.10.3.custom.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+    <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+    <!-- endbuild -->
+
+    <!-- build:css /styles/themes/kendo-ui/kendo-ui.css -->
+    <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.silver.min.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="/styles/base/base.css">
+    <link rel="stylesheet" href="/styles/layout/layout.css">
+    <link rel="stylesheet" href="/styles/modules/sidebar.css">
+    <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+    <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+    <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/modules/tagList.css">
+    <link rel="stylesheet" href="/styles/modules/formsSections.css">
+    <link rel="stylesheet" href="/styles/modules/editableTable.css">
+    <link rel="stylesheet" href="/styles/modules/popinEditor.css">
+    <link rel="stylesheet" href="/styles/modules/allergens.css">
+
+    <!--[if IE 8]>
+        <link rel="stylesheet" href="/styles/compatibility/ie8.css">
+        <![endif]-->
+
+    <!-- build:js /scripts/libraries/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+
+    <div class="l-layout menu-is-visible" id="l-layout">
+
+        <!-- START : Main content -->
+        <main class="l-main" id="l-main">
+            <div class="l-main-content" id="l-main-content">
+
+                <!-- Page header -->
+                <header class="page-summary">
+                    <h1 class="page-summary-title">Allergens section</h1>
+                </header>
+
+                <!-- START : Sections -->
+                <span class="anchor-target" id="section-allergens"></span>
+                <fieldset class="section">
+                    <legend class="section-title is-collapsible is-open level-1">Allergens</legend>
+                    <hr>
+                    <div class="collapsible-target">
+
+                        <fieldset class="section section-level-1">
+                            <legend class="section-title is-collapsible is-open level-2">US &amp; Canadian regulations</legend>
+                            <hr>
+                            <div class="collapsible-target">
+
+                                <table class="editable-table edit allergens top-align-cells uscanada" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+                                            <th>Not present</th>
+                                            <th>Present</th>
+                                            <th>Produced on same line</th>
+                                            <th>Produced on same facility</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="item-present">
+                                            <td>
+                                                Seafood
+                                                <span class="column-item-detail">Ingredient(s)</span>
+                                                <input type="hidden" name="ingredient_id" value="123">
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="ingredient_status" id="" value="not-present">
+                                            </td>
+                                            <td>
+                                                <input checked type="checkbox" name="ingredient_status" id="" value="present">
+                                                <output class="ingredient-values">
+                                                    <span class="value">
+                                                        <strong>Crab</strong> (Crab sauce)
+                                                    </span>
+                                                    <span class="value not-published">
+                                                        <strong>Lobster</strong> (Lobster supreme)
+                                                    </span>
+                                                </output>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="ingredient_status" id="" value="produced-on-same-line">
+                                                <output class="ingredient-values is-hidden">
+                                                    <span class="value">--</span>
+                                                </output>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="ingredient_status" id="" value="produced-on-same-facility">
+                                                <output class="ingredient-values is-hidden">
+                                                    <span class="value">--</span>
+                                                </output>
+                                            </td>
+                                        </tr>
+                                        <tr class="item-present">
+                                            <td>
+                                                Egg
+                                                <span class="column-item-detail">Ingredient(s)</span>
+                                                <input type="hidden" name="ingredient_id" value="456">
+                                            </td>
+                                            <td>
+                                                <input checked type="checkbox" name="ingredient_status" id="" value="not-present">
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="ingredient_status" id="" value="present">
+                                                <output class="ingredient-values is-hidden">
+                                                    <span class="value">--</span>
+                                                </output>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="ingredient_status" id="" value="produced-on-same-line">
+                                                <output class="ingredient-values is-hidden">
+                                                    <span class="value">--</span>
+                                                </output>
+                                            </td>
+                                            <td>
+                                                <input checked type="checkbox" name="ingredient_status" id="" value="produced-on-same-facility">
+                                                <output class="ingredient-values">
+                                                    <span class="value">--</span>
+                                                </output>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </fieldset>
+                <!-- END : Sections -->
+
+            </div>
+        </main>
+        <!-- END : Main content -->
+
+        <!-- START : Sidebar -->
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuToggle" class="menu-toggle">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        <aside class="l-sidebar" id="l-sidebar">
+            <div class="l-sidebar-content">
+
+                <!-- START : Menu "Who" -->
+                <div class="menu who">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Communities</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Clients</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Client 1</a>
+                                    </li>
+                                    <li class="selected"><a href="#">Client 2</a>
+                                    </li>
+                                    <li><a href="#">Client 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "Who" -->
+
+                <!-- START : Menu "What" -->
+                <div class="menu what">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Projects</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Projects</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Project 1</a>
+                                    </li>
+                                    <li class="selected"><a href="#">Project 2</a>
+                                    </li>
+                                    <li><a href="#">Project 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "What" -->
+
+                <!-- START : Menu "Sections" -->
+                <div class="menu sections">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Sections</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul class="selectable">
+                            <li><a href="#section-prod-id">Product Identification</a>
+                            </li>
+                            <li><a href="#section-trace">Raw Material Traceability</a>
+                            </li>
+                            <li class="selected"><a href="#section-allergens">Allergens</a>
+                            </li>
+                            <li><a href="#section-formula">Formula</a>
+                            </li>
+                            <li><a href="#section-questions">Questions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "Sections" -->
+
+            </div>
+        </aside>
+        <!-- START : Sidebar -->
+
+    </div>
+
+    <!-- build:js /scripts/libraries/jquery.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.core.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.widget.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.position.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.draggable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.resizable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.sortable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.autocomplete.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.button.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.datepicker.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.dialog.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.menu.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.tooltip.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js /scripts/libraries/kendo.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/kendo-ui/js/kendo.web.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js /scripts/libraries/libs.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/mustache/mustache.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- TODO : remove during integration -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+
+    <script src="/scripts/smartResize.js"></script>
+    <script src="/scripts/namespace.js"></script>
+    <script src="/scripts/layout.js"></script>
+    <script src="/scripts/collapsible.js"></script>
+    <script src="/scripts/tagList.js"></script>
+    <script src="/scripts/popinAllergensEditor.js"></script>
+
+    <script>
+        //on page load
+        $(function () {
+            //setup layout scripts
+            TraceOne.layout.init({
+                elems: {
+                    layout: "#l-layout",
+                    header: "#l-header",
+                    main: "#l-main",
+                    mainContent: "#l-main-content",
+                    sidebar: "#l-sidebar",
+                    menuToggle: "#menuToggle"
+                },
+                scrollableClass: "scrollable",
+                autoCompleteClass: "ui-autocomplete",
+                menuIsVisibleClass: "menu-is-visible"
+            });
+
+            //setup sidebar menu scripts
+            TraceOne.collapsible.init({
+                targetClass: "collapsible-target", //elem that will be collapsed
+                collapsibleClass: "is-collapsible", //elem that we attach the handler on
+                onChangeCallbacks: []
+            });
+
+            //setup popin for allergens
+            TraceOne.popinAllergensEditor.init({
+                container: ".edit.allergens .ingredient-values",
+                appendPointClass: ".l-layout",
+                imgBaseUrl: "/img/ico/",
+                urls: {
+                    "get": "/ingredients/load/{projectId}",
+                    "save": "/ingredients/save/{projectId}"
+                },
+                ingredientClassNames: {
+                    "species": "ingredient-species",
+                    "ingredient": "ingredient-name",
+                    "isPublished": "ingredient-is-published"
+                },
+                customMessages: {
+                    "save": "We were unable to save your changes",
+                    "load": "We were unable to load the information for this ingredient"
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

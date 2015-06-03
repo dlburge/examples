@@ -1,0 +1,54 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+.tag-cloud {
+    @include set-font-size(12px, 0.85);
+    color : #333;
+    margin : 5px 0 0 0;
+    padding : 1px;
+    list-style-type:none;
+    .tag {
+        display:inline-block;
+        background-color:#eee;
+        padding: 5px;
+        margin: 1px 5px 2px 0;
+        line-height: normal;
+        border-radius: 3px;
+        &:hover {
+            background-color:#ddd;
+        }
+        label {
+            position: relative;
+            display:inline-block;
+            margin : 0;
+            padding : 0 20px 0 0;
+            color : #333;
+            width : auto;
+            mark {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width : 15px;
+                display:inline-block;
+                background: url("../../img/ico/ico-tag.png") no-repeat 0 center transparent;
+            }
+            &:hover mark {
+                background: url("../../img/ico/ico-tag-delete.png") no-repeat 0 center transparent;
+            }
+        }
+    }
+    //hide the checkbox, use position absolute so it doesn't take up any space
+    input[type=checkbox]{
+        visibility:hidden;
+        position : absolute;
+    }
+
+}
+
+.field .tag-cloud {
+    margin: 3px 1px 1px 155px;
+    display: block;
+    max-width: 150px;
+}

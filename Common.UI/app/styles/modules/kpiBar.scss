@@ -1,0 +1,62 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+.kpi-bar {
+    margin-bottom: 10px;
+    padding: 15px 0 30px;
+    @include double-border;
+    
+    .kpi-bar-title {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 25px 0 0;
+        padding: 0;
+    }
+    
+    .kpi-bar-items {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: middle;
+        li {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding: 0 5px;
+            border-left: $general-border;
+            .count {
+                
+                font-size: 1.75em;
+                line-height: .85714em;
+                
+                //@include set-font-size(12px); TODO
+                
+                display: block;
+            }
+
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 15px;
+        color:#000;
+        &:hover {
+            color:#000;
+            text-decoration: none;
+            background-color: #e0fcff;
+        }
+        &.active {
+            color:#000;
+            background-color: #f2f2f2;
+        }
+    }
+    
+}
+
+.kpi-bar .kpi-bar-items li a.selected {
+    background-color: #FAFAFA;
+}

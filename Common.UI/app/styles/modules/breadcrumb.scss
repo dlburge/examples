@@ -1,0 +1,22 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+/* header breadcrumb */
+.breadcrumb {
+    @include set-font-size(12px);
+    list-style: none;
+    margin : 7px 20px;
+    padding : 0;
+    color : $breadcrumb-color;
+    li {
+        display: inline;
+        a {
+            color : $breadcrumb-link-color;
+        }
+        span {
+            color : $breadcrumb-current-item;
+        }
+    }
+}

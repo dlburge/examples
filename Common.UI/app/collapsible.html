@@ -1,0 +1,263 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Collapsible widget</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+    <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="/styles/base/base.css">
+    <link rel="stylesheet" href="/styles/layout/layout.css">
+    <link rel="stylesheet" href="/styles/modules/sidebar.css">
+    <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+    <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+    <link rel="stylesheet" href="/styles/modules/widget.css">
+    <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/modules/tagList.css">
+
+    <!--[if IE 8]>
+        <link rel="stylesheet" href="/styles/compatibility/ie8.css">
+    <![endif]-->
+
+    <!-- build:js /scripts/libraries/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+
+    <div class="l-layout menu-is-visible" id="l-layout">
+
+        <!-- START : Main content -->
+        <main class="l-main" id="l-main">
+            <div class="l-main-content" id="l-main-content">
+
+                <!-- Page header -->
+                <header class="page-summary">
+                    <h1 class="page-summary-title">Collapsible widget</h1>
+                    <div class="page-summary-info">
+                        <p>Allows us to create collapsible "panels" (menus, sections, etc.)</p>
+                        <p>Each of the collapsible areas in this page depend upon the following files:
+                            <ul>
+                                <li>scripts/collapsible.js</li>
+                            </ul>
+                        </p>
+                    </div>
+                </header>
+
+                <!-- grid layout for widgets -->
+                <div class="l-grid container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="widget">
+
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">PROJECTS</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+
+                                    <div class="menu what">
+                                        <h3 class="menu-title is-collapsible is-open">
+                                                <span>Projects</span>
+                                            </h3>
+                                        <div class="menu-content-wrapper collapsible-target">
+                                            <ul>
+                                                <li>
+                                                    <span class="is-collapsible is-open">Projects</span>
+                                                    <ul class="collapsible-target">
+                                                        <li><a href="#">Project 1</a>
+                                                        </li>
+                                                        <li><a href="#">Project 2</a>
+                                                        </li>
+                                                        <li><a href="#">Project 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Widget 2</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+                                    dqsdfqdsf qsdf
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Widget 3</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+                                    dqsdfqdsf qsdf
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Widget 4</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+                                    dqsdfqdsf qsdf
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <!-- END : Main content -->
+
+        <!-- START : Sidebar -->
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuToggle" class="menu-toggle">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        <aside class="l-sidebar" id="l-sidebar">
+            <div class="l-sidebar-content">
+
+                <!-- START : Menu "Who" -->
+                <div class="menu who">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Communities</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Suppliers</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Supplier 1</a>
+                                    </li>
+                                    <li><a href="#">Supplier 2</a>
+                                    </li>
+                                    <li><a href="#">Supplier 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="is-collapsible is-open">Clients</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Client 1</a>
+                                    </li>
+                                    <li class="selected"><a href="#">Client 2</a>
+                                    </li>
+                                    <li><a href="#">Client 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "Who" -->
+
+                <!-- START : Menu "What" -->
+                <div class="menu what">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Projects</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Projects</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Project 1</a>
+                                    </li>
+                                    <li><a href="#">Project 2</a>
+                                    </li>
+                                    <li><a href="#">Project 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "What" -->
+
+            </div>
+        </aside>
+        <!-- START : Sidebar -->
+
+    </div>
+
+    <!-- build:js /scripts/libraries/jquery.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js /scripts/libraries/libs.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/mustache/mustache.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- TODO : remove during integration -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+
+    <script src="/scripts/smartResize.js"></script>
+    <script src="/scripts/namespace.js"></script>
+    <script src="/scripts/layout.js"></script>
+    <script src="/scripts/collapsible.js"></script>
+
+    <script>
+        //on page load
+        $(function () {
+            //setup layout scripts
+            TraceOne.layout.init({
+                elems: {
+                    layout: "#l-layout",
+                    header: "#l-header",
+                    main: "#l-main",
+                    mainContent: "#l-main-content",
+                    sidebar: "#l-sidebar",
+                    menuToggle: "#menuToggle"
+                },
+                menuIsVisibleClass: "menu-is-visible",
+                headerMenuItemClass: ".nav-bar-item"
+            });
+
+            //setup sidebar menu scripts
+            TraceOne.collapsible.init({
+                targetClass: "collapsible-target", //elem that will be collapsed
+                collapsibleClass: "is-collapsible", //elem that we attach the handler on
+                onChangeCallbacks: []
+            });
+        });
+    </script>
+
+</body>
+
+</html>

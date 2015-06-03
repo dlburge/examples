@@ -1,0 +1,26 @@
+{
+    "node": true,
+    "browser": true,
+    "esnext": true,
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "quotmark": "double",
+    "undef": true,
+    //"unused": true,
+    "unused": "vars", //Don't check function params, just variables
+    "strict": true,
+    "trailing": false,
+    "smarttabs": true,
+    "jquery": true,
+    "globals": { 
+        "TraceOne": true,
+        "Mustache": true
+    }
+}

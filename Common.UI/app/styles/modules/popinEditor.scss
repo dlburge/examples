@@ -1,0 +1,65 @@
+/* Base variables and mixins
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+*/
+.popinEditor {
+
+    padding : 10px 0;
+    position : absolute;
+    z-index : 9999;
+    background-color : #FFF;
+    border : solid 2px #ddd;
+    box-shadow: 3px 3px 6px #eee;
+
+    .arrow {
+        position: absolute;
+        top:-13px;
+        left: 48%;
+    }
+
+    fieldset {
+        border: none;
+    }
+    .field {
+        float:left;
+        margin : 5px;
+        label {
+            width: auto;
+            display: block;
+            text-align: center;
+            margin: 5px auto;
+        }
+        input, select {
+            width : 50px;
+            margin-left : 5px;
+        }
+    }
+
+    .editable-table .delete-row {
+        position : inherit;
+    }
+
+    .actions {
+        display: block;
+        clear : both;
+        padding-top : 20px;
+        margin:0;
+        text-align : center;
+        button {
+            color : #809913;
+            background-color : #FFF;
+            border : solid 1px #e4e4e4;
+            border-radius: 3px;
+            padding : 3px 10px;
+            margin-left : 5px;
+        }
+        button[type="submit"]{
+            font-weight : bold;
+        }
+        button[type="reset"]{
+            background-color: #EEE;
+            padding-bottom : 4px;
+        }
+    }
+}

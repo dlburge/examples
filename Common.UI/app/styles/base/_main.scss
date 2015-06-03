@@ -1,0 +1,67 @@
+// Compass modules
+//TODO : remove all unneeded imports
+//@import "compass/css3/text-shadow";
+//@import "compass/css3/box-shadow";
+//@import "compass/css3/border-radius";
+//@import "compass/css3/box-sizing";
+//@import "compass/css3/images";
+//@import "compass/utilities";
+
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+/* set baseline font-size, etc. (vertical rhythm) */
+@include establish-baseline;
+
+html, 
+body {
+    height : 100%;
+    overflow: hidden;
+}
+
+body { 
+    font-family : $base-font-family;
+    margin : 0;
+    padding : 0;
+    background-color : $page-bg-color;
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1 {
+    @include set-font-size(30px);
+}
+h1 {
+    @include set-font-size(36px);
+}
+h2 { 
+    @include set-font-size(24px); 
+}
+h3 { 
+    @include set-font-size(20px);
+}
+h4 { 
+    @include set-font-size(16px);
+}
+h5 { 
+    @include set-font-size(14px);
+}
+h6 { 
+    @include set-font-size(12px);
+}
+
+//Links
+a {
+    color:#000;
+    text-decoration:none;
+    &:hover {
+        color:#000;
+        text-decoration:underline;
+    }
+}
+

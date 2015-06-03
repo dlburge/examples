@@ -1,0 +1,117 @@
+<!-- Species + Ingredient -->
+<table class="editable-table edit" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="delete-row">&nbsp;</th>
+            <th>Specie</th>
+            <th>Ingredient name</th>
+            <th>Supplier</th>
+            <th>Component/Finished product</th>
+            <th>To be published</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="6"><a href="#" id="" name="">+ Add new line</a></td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td class="delete-row empty">&nbsp;</td>
+            <td class="ingredient-species">Crab</td>
+            <td class="ingredient-name">Crab sauce</td>
+            <td>CrabCorp</td>
+            <td>Premium Crab sauce</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="a" id="a"></td>
+        </tr>
+        <tr>
+            <td class="delete-row empty">&nbsp;</td>
+            <td class="ingredient-species">Lobster</td>
+            <td class="ingredient-name">Lobster supreme</td>
+            <td>CrustaceanCorp</td>
+            <td>Lobster sauce</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="b" id="b"></td>
+        </tr>
+        <tr>
+            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+            <td class="ingredient-species"><input type="text" name="aaaaaa" id="aaaaaa" value="" class="allergensAutocomplete"></td>
+            <td class="ingredient-name"><input type="text" name="" id="" value=""></td>
+            <td>Myself</td>
+            <td>MyProject</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="c" id="c"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- Ingredient only -->
+<!-- 
+<table class="editable-table edit" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="delete-row">&nbsp;</th>
+            <th>Ingredient name</th>
+            <th>Supplier</th>
+            <th>Component/Finished product</th>
+            <th>To be published</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5"><a href="#" id="" name="">+ Add new line</a></td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td class="delete-row empty">&nbsp;</td>
+            <td class="ingredient-name">Crab sauce</td>
+            <td>CrabCorp</td>
+            <td>Premium Crab sauce</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="a" id="a"></td>
+        </tr>
+        <tr>
+            <td class="delete-row empty">&nbsp;</td>
+            <td class="ingredient-name">Lobster supreme</td>
+            <td>CrustaceanCorp</td>
+            <td>Lobster sauce</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="b" id="b"></td>
+        </tr>
+        <tr>
+            <td class="delete-row"><img name="" id="" src="img/ico/ico-delete.png"></td>
+            <td class="ingredient-name"><input type="text" name="" id="" value=""></td>
+            <td>Myself</td>
+            <td>MyProject</td>
+            <td class="ingredient-is-published"><input checked type="checkbox" name="c" id="c"></td>
+        </tr>
+    </tbody>
+</table>
+-->
+
+<script>
+$(function(){ 
+    
+    /*
+        TODO 
+        - implement the "add new item" JS code
+        
+        - add real url 
+            - does the autocomplete data change depending upon the ingredient row ? (Fish, Crustacean shellfish, Tree nuts)
+            - if so do we create an autocomplete for each ? (specific url and specific classname)
+        
+        - store GUID when element is selected in the autocomplete :  see example here with the select method - http://jqueryui.com/autocomplete/#custom-data
+            - we can store the GUID of the species in a hidden field, the above example shows how to set the value of a field with a value coming from the returned data
+    */
+    
+    //setup allergens autocomplete that will be used in popin
+    var allergens = ["Lobster","Shrimp","Crab"];
+    $(".allergensPopin").delegate("input.allergensAutocomplete", "focusin", function() {
+        var $this = $(this);
+        if(!$this.is(":data(autocomplete)")) {
+            $this.autocomplete({
+                source: allergens //TODO : call the right autocomplete service
+            });
+        }
+    });
+    
+});
+</script>

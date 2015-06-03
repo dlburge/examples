@@ -1,0 +1,322 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Taglist widget</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- build:css /styles/themes/jquery-ui/jquery-ui.css -->
+    <link rel="stylesheet" href="/styles/themes/jquery-ui/jquery-ui-1.10.3.custom.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+    <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="/styles/base/base.css">
+    <link rel="stylesheet" href="/styles/layout/layout.css">
+    <link rel="stylesheet" href="/styles/modules/sidebar.css">
+    <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+    <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+    <link rel="stylesheet" href="/styles/modules/widget.css">
+    <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/modules/tagList.css">
+    <link rel="stylesheet" href="/styles/modules/formsSections.css">
+
+    <!--[if IE 8]>
+        <link rel="stylesheet" href="/styles/compatibility/ie8.css">
+        <![endif]-->
+
+    <!-- build:js /scripts/libraries/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+
+    <div class="l-layout menu-is-visible" id="l-layout">
+
+        <!-- START : Main content -->
+        <main class="l-main" id="l-main">
+            <div class="l-main-content" id="l-main-content">
+
+                <!-- Page header -->
+                <header class="page-summary">
+                    <h1 class="page-summary-title">Taglist widget</h1>
+                    <div class="page-summary-info">
+                        <p>Allows us to make multiple selections from an autocomplete or select field. The selected values are shown as "tags" and may be deleted. The tags are actually made from a label and checkbox. The checkbox is checked and contains the real value of the selected item.</p>
+                        <p>The two examples below depend upon the following files:
+                            <ul>
+                                <li>scripts/tagList.js</li>
+                                <li>styles/modules/tagList.css</li>
+                            </ul>
+                        </p>
+                    </div>
+                </header>
+
+                <!-- grid layout for widgets -->
+                <div class="l-grid container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Taglist on a select field</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+                                    <p class="field">
+                                        <label for="country">Choose your country</label>
+                                        <select name="country" id="country" class="countrySelect">
+                                            <option value="1">USA</option>
+                                            <option value="2">Mexico</option>
+                                            <option value="3">France</option>
+                                            <option value="4">Spain</option>
+                                            <option value="5">Italy</option>
+                                            <option value="6">Argentina</option>
+                                            <option value="7">Bresil</option>
+                                        </select>
+                                        <output id="country-output" class="tag-cloud"></output>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Taglist on an autocomplete field</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+
+                                    <p class="field">
+                                        <label for="product-packed-in">Product packed in</label>
+                                        <input type="text" name="product-packed-in" id="product-packed-in" value="" class="countryAutocomplete">
+                                        <output id="product-origin-output" class="tag-cloud">
+
+                                            <span class="tag">
+                                                <label for="product-packed-tag-0-id">
+                                                    USA <mark>&nbsp;</mark>
+                                                </label>
+                                                <input type="checkbox" value="1" name="product-packed-tag" id="product-packed-tag-0-id" checked>
+                                            </span>
+
+                                        </output>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <!-- END : Main content -->
+
+        <!-- START : Sidebar -->
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuToggle" class="menu-toggle">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        <aside class="l-sidebar" id="l-sidebar">
+            <div class="l-sidebar-content">
+
+                <!-- START : Menu "Who" -->
+                <div class="menu who">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Communities</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Suppliers</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Supplier 1</a>
+                                    </li>
+                                    <li><a href="#">Supplier 2</a>
+                                    </li>
+                                    <li><a href="#">Supplier 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="is-collapsible is-open">Clients</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Client 1</a>
+                                    </li>
+                                    <li class="selected"><a href="#">Client 2</a>
+                                    </li>
+                                    <li><a href="#">Client 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "Who" -->
+
+                <!-- START : Menu "What" -->
+                <div class="menu what">
+                    <h3 class="menu-title is-collapsible is-open">
+                            <span>Projects</span>
+                        </h3>
+                    <div class="menu-content-wrapper collapsible-target">
+                        <ul>
+                            <li>
+                                <span class="is-collapsible is-open">Projects</span>
+                                <ul class="collapsible-target">
+                                    <li><a href="#">Project 1</a>
+                                    </li>
+                                    <li><a href="#">Project 2</a>
+                                    </li>
+                                    <li><a href="#">Project 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END : Menu "What" -->
+
+            </div>
+        </aside>
+        <!-- START : Sidebar -->
+
+    </div>
+
+    <!-- build:js /scripts/libraries/jquery.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.core.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.widget.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.mouse.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.position.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.draggable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.resizable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.sortable.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.autocomplete.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.button.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.datepicker.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.dialog.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.menu.min.js"></script>
+    <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.tooltip.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js /scripts/libraries/libs.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/mustache/mustache.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- TODO : remove during integration -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+
+    <script src="/scripts/smartResize.js"></script>
+    <script src="/scripts/namespace.js"></script>
+    <script src="/scripts/layout.js"></script>
+    <script src="/scripts/collapsible.js"></script>
+    <script src="/scripts/tagList.js"></script>
+
+    <script>
+        //on page load
+        $(function () {
+            //setup layout scripts
+            TraceOne.layout.init({
+                elems: {
+                    layout: "#l-layout",
+                    header: "#l-header",
+                    main: "#l-main",
+                    mainContent: "#l-main-content",
+                    sidebar: "#l-sidebar",
+                    menuToggle: "#menuToggle"
+                },
+                menuIsVisibleClass: "menu-is-visible",
+                headerMenuItemClass: ".nav-bar-item"
+            });
+
+            //setup sidebar menu scripts
+            TraceOne.collapsible.init({
+                targetClass: "collapsible-target", //elem that will be collapsed
+                collapsibleClass: "is-collapsible", //elem that we attach the handler on
+                onChangeCallbacks: []
+            });
+
+            //setup taglists
+            TraceOne.tagList.init({
+                tagContainerClass: "tag-cloud",
+                tagClass: "tag"
+            });
+
+            //setup country autocomplete
+            var countries = [
+                {
+                    "value": 1,
+                    "label": "USA"
+                },
+                {
+                    "value": 2,
+                    "label": "Mexico"
+                },
+                {
+                    "value": 3,
+                    "label": "France"
+                },
+                {
+                    "value": 4,
+                    "label": "Spain"
+                },
+                {
+                    "value": 5,
+                    "label": "Italy"
+                },
+                {
+                    "value": 6,
+                    "label": "Argentina"
+                },
+                {
+                    "value": 7,
+                    "label": "Bresil"
+                }
+            ];
+
+            $("input.countryAutocomplete").autocomplete({
+                source: countries,
+                select: function (e, data) {
+                    TraceOne.tagList.addTag(e, data);
+                },
+                focus: function (event, ui) {
+                    event.preventDefault;
+                    return false;
+                }
+            });
+
+            $("select.countrySelect").change(function(e, data){
+                data = {
+                    item: {
+                        value: e.currentTarget.value,
+                        label: e.currentTarget.selectedOptions[0].text
+                    }
+                };
+
+                TraceOne.tagList.addTag(e, data);
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

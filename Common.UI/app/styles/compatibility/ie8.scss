@@ -1,0 +1,29 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+
+.lt-ie9 {
+    
+    .menu-toggle {
+        top: 0;
+    }
+    
+    .l-header,
+    .page-summary,
+    .kpi-bar {
+        border-bottom: $general-border;
+    }
+    
+    .l-sidebar {
+        background-color: #fff;
+    }
+    
+    .l-main-content {
+        margin-left : 15px;
+        margin-right : 15px;
+    }
+    
+    .modal-open .modal-dialog {
+        width: 600px;
+        margin: 10px auto;
+    }
+}

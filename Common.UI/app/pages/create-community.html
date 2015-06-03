@@ -1,0 +1,631 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>HTML</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/favicon.ico">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <!-- custom styles/themes for external libraries --> 
+        
+        <!-- build:css /styles/themes/jquery-ui/jquery-ui.css -->
+        <link rel="stylesheet" href="/styles/themes/jquery-ui/jquery-ui-1.10.4.custom.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+        <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/kendo-ui/kendo-ui.css -->
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.core.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.default.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.silver.min.css">
+        <!-- endbuild -->
+        
+        <link rel="stylesheet" href="/styles/base/base.css">
+        <link rel="stylesheet" href="/styles/layout/layout.css">
+        <link rel="stylesheet" href="/styles/modules/header.css">
+        <link rel="stylesheet" href="/styles/modules/sidebar.css">
+        <link rel="stylesheet" href="/styles/modules/searchbox.css">
+        <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+        <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+        <link rel="stylesheet" href="/styles/modules/kpiBar.css">
+        <link rel="stylesheet" href="/styles/modules/languageSelector.css">
+        <link rel="stylesheet" href="/styles/modules/kendoGridDashboard.css">
+        <link rel="stylesheet" href="/styles/modules/messages.css">
+        <link rel="stylesheet" href="/styles/modules/widget.css">
+        <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+        <link rel="stylesheet" href="/styles/modules/confirmationDialog.css">
+        <link rel="stylesheet" href="/styles/modules/section.css">
+        <link rel="stylesheet" href="/styles/modules/forms.css">
+        <link rel="stylesheet" href="/styles/modules/editableTable.css">
+        <link rel="stylesheet" href="/styles/modules/formula.css">
+        <link rel="stylesheet" href="/styles/modules/tagcloud.css">
+        <link rel="stylesheet" href="/styles/modules/tooltip.css">
+        <link rel="stylesheet" href="/styles/modules/autocomplete.css">
+        
+        <!--[if IE 8]>
+        <link rel="stylesheet" href="/styles/compatibility/ie8.css">
+        <![endif]-->
+        
+        <!-- build:js /scripts/libraries/modernizr.js -->
+        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        
+    </head>
+    <body>
+        
+        <div class="l-layout menu-is-visible" id="l-layout">
+        
+            <!-- START : Header -->
+            <header class="l-header" id="l-header">
+                
+                <nav class="l-header-nav-context">
+                    <ul class="nav-bar">
+                        <li>
+                            <a href="/index.html"><img class="header-logo" src="/img/logo.png" width="41" height="41" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-projects.png" width="21" height="27" alt="" /></a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <nav class="l-header-nav">
+                    <ul class="nav-bar">
+                        <li id="userprofil-navbar-item" class="nav-bar-item">
+                            <figure class="user">
+                                <figcaption>
+                                    <strong>Cyril ddd Maître</strong>
+                                    Chef de marché
+                                </figcaption>
+                                <img src="/img/portait.png" width="30" height="30" alt="" />
+                            </figure>
+                            <div class="nav-bar-menu nav-bar-menu-user">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+                                <img width="110" height="110" class="userPhoto" src="/img/ico/ico-user-lg.png">
+                                <ul class="user-profile-menu">
+                                    <li><a href="#">View profile</a></li>
+                                    <li><a href="#">My company</a></li>
+                                    <li>
+                                        <div id="language-selector" class="language-selector">
+                                            <ul>
+                                                <li><a href="#" class="fr-FR">français (France)</a></li>
+                                                <li class="active-language"><a href="#" class="en-US">English (United States)</a></li>
+                                                <li><a href="#" class="de-DE">Deutsch (Deutschland)</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="action-link" href="https://10.231.100.153/NextRelease/TraceOne.STS/?wa=wsignout1.0&amp;wreply=https://10.231.100.153/NextRelease/drupal/t1sso/logout">Sign out</a>
+                            </div>
+                        </li>
+                        <li id="notif-navbar-item" class="nav-bar-item">
+                            <a href="#"><img src="/img/ico/ico-message.png" width="30" height="30" alt="" /></a>
+                            <div class="nav-bar-menu nav-bar-menu-notifications">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+                                
+                                <div class="scroll-wrapper">
+                                    
+                                    <ul>
+                                        <li ng-repeat="item in notifications" class="ng-scope">
+                                        <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                                        <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9849" title="test">test</a> on <b>6/3/2014 2:37:52 PM</b></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>0 notifications</li>
+                                    </ul>                                    
+                                </div>
+                                
+                                <a class="action-link" href="#">View all notifications</a>
+                            </div>
+                        </li>
+                        <!-- TODO : 
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-people.png" width="30" height="30" alt="" /></a>
+                            <ul class="nav-bar-menu">
+                                <li><a href="#">Fournisseurs</a></li>
+                                <li><a href="#">Client</a></li>
+                                <li><a href="#">Groupe</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-modules.png" width="29" height="29" alt="" /></a>
+                            <ul class="nav-bar-menu">
+                                <li><a href="#">Enquetes</a></li>
+                                <li><a href="#">PLM</a></li>
+                                <li><a href="#">Dictionnaire</a></li>
+                                <li><a href="#">Actualités</a></li>
+                                <li><a href="#">Brief</a></li>
+                            </ul>
+                        </li>
+                        -->
+                        <li id="help-navbar-item" class="nav-bar-item">
+                            <a href="#"><img src="/img/ico/ico-help-question.png" width="30" height="30" alt="" /></a>
+                            <div class="nav-bar-menu nav-bar-menu-help">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+                                <ul>
+                                    <li><a href="#">T product-space Help</a></li>
+                                    <li><a href="#">Aide en ligne</a></li>
+                                    <li><a href="#">E-learning</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </header>
+            <!-- END : Header -->
+            
+            <!-- START : Main content -->
+            <main class="l-main" id="l-main">
+                <div class="l-main-content" id="l-main-content">
+                    
+                    <!-- Information message -->
+                    <div class="message info-message">
+                        <ul>
+                            <li>You are currently creating a new Dynamic Communtity. Please use the filters at the top of you user list to define community members.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Page header -->
+                    <header class="page-summary">
+                        <h1 class="page-summary-title">Page title</h1>
+                    </header>
+                    
+                    <!-- START : Form -->
+                    <fieldset class="section">
+                        <legend class="section-title is-collapsible is-open level-1">Fieldset title</legend>
+                        <hr>
+                        <div class="collapsible-target">
+
+                            <p class="field required">
+                                <label for="project-name">Project name</label>
+                                <input type="text" name="project-name" id="project-name" value="Ham & Cheese Sandwich">
+                            </p>
+                            
+                            <p class="field">
+                                <label for="product-origin">Product origin</label>
+                                <input type="text" name="product-origin" id="product-origin" value="" class="countryAutocomplete">
+                                <output class="tag-cloud">
+                                </output>
+                            </p>
+
+                            <p class="field">
+                                <label for="product-packed-in">Product packed in</label>
+                                <input type="text" name="product-packed-in" id="product-packed-in" value="" class="countryAutocomplete">
+                                <output id="product-origin-output" class="tag-cloud">
+
+                                    <span class="tag">
+                                        <label for="product-packed-tag-0-id">
+                                            USA <mark>&nbsp;</mark>
+                                        </label>
+                                        <input type="checkbox" value="1" name="product-packed-tag" id="product-packed-tag-0-id" checked>
+                                    </span>
+
+                                    <span class="tag">
+                                        <label for="product-origin-tag-1-id">
+                                            Spain <mark>&nbsp;</mark>
+                                        </label>
+                                        <input type="checkbox" value="4" name="product-packed-tag" id="product-packed-tag-1-id" checked>
+                                    </span>
+                                    
+                                </output>
+                            </p>
+                            
+                            <p class="field">
+                                <label>Type</label>
+                                <span class="checkbox-container">
+                                    <input type="radio" name="community-type" id="community-type-1">
+                                    <label for="community-type-1">Static</label>
+
+                                    <input type="radio" name="community-type" id="community-type-2">
+                                    <label for="community-type-2">Dynamique</label>
+                                </span>
+                            </p>
+                            
+                            <p class="field">
+                                <label>Description</label>
+                                <textarea class="large-paragraph"></textarea>
+                            </p>
+                        </div>
+                    </fieldset>
+                    <!-- END : Form -->
+                    
+                </div>
+            </main>
+            <!-- END : Main content -->
+            
+            <!-- START : Sidebar -->
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuToggle" class="menu-toggle">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <aside class="l-sidebar" id="l-sidebar">
+                <div class="l-sidebar-content">
+                    <form action="#" name="search-box-form">
+                    <div class="menu">
+                        <input class="search-box-field" name="global-search" id="global-search" type="text" value="">
+                    </div>
+                    </form>
+
+                    <!-- START : Menu "Who" -->
+                    <div class="menu who">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Communities</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li>
+                                    <span class="is-collapsible is-open">Suppliers</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Supplier 1</a></li>
+                                        <li><a href="#">Supplier 2</a></li>
+                                        <li><a href="#">Supplier 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="is-collapsible is-open">Clients</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Client 1</a></li>
+                                        <li class="selected"><a href="#">Client 2</a></li>
+                                        <li><a href="#">Client 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <!-- END : Menu "Who" -->
+
+                    <!-- START : Menu "When" -->
+                    <div class="menu when">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>When</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li><a href="#">Today</a></li>
+                                <li><a href="#">Yesterday</a></li>
+                                <li><a href="#">Last week</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "When" -->
+
+                    <!-- START : Menu "What" -->
+                    <div class="menu what">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Projects</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+
+                            <form class="viewer">
+                                <fieldset>
+                                <input class="viewer-bt" type="image" src="/img/ico/ico-viewer.png" alt="Submit" />
+                                <select class="viewer-select" name="">
+                                    <option value="0">Private space</option>
+                                    <option value="1">Input</option>
+                                    <option value="2">Output</option>
+                                </select>
+                                <select class="viewer-select" name="">
+                                    <option value="0">Sections</option>
+                                    <option value="1">Statut</option>
+                                </select>
+                                </fieldset>
+                            </form>
+
+                            <ul>
+                                <li>
+                                    <span class="is-collapsible is-open">Projects</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Project 1</a></li>
+                                        <li><a href="#">Project 2</a></li>
+                                        <li><a href="#">Project 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "What" -->
+
+                    <!-- START : Menu "Sections" -->
+                    <div class="menu sections">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Sections</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul class="selectable">
+                                <li class="selected"><a href="#section-prod-id">Product Identification</a></li>
+                                <li><a href="#section-trace">Raw Material Traceability</a></li>
+                                <li><a href="#section-prod-coding">Product coding</a></li>
+                                <li><a href="#section-storage">Storage</a></li>
+                                <li><a href="#section-phys-char">Physical characteristics</a></li>
+                                <li><a href="#section-chem-char">Chemical characteristics</a></li>
+                                <li><a href="#section-micro-char">Microbiological characteristics</a></li>
+                                <li><a href="#section-orga-char">Organoleptic characteristics</a></li>
+                                <li><a href="#section-allergens">Allergens</a></li>
+                                <li><a href="#section-nutrition">Nutrition</a></li>
+                                <li><a href="#section-formula">Formula</a></li>
+                                <li><a href="#section-certifs">Certifications</a></li>
+                                <li><a href="#section-label-other">Labeling - Other panel</a></li>
+                                <li><a href="#section-label-product-info">Labeling - Product information panel</a></li>
+                                <li><a href="#section-label-display">Labeling - Product display panel</a></li>
+                                <li><a href="#section-packaging">Packaging</a></li>
+                                <li><a href="#section-manufacturer-id">Manufacturer Identification</a></li>
+                                <li><a href="#section-attachments">Attachments</a></li>
+                                <li><a href="#section-questions">Questions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "Sections" -->
+
+                    <!-- START : Menu "How" -->
+                    <div class="menu how">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Actions</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li><button disabled>Save</button></li>
+                                <li><a href="#">Cancel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "How" -->
+                    
+                </div>
+            </aside>
+            <!-- END : Sidebar -->
+            
+        </div>
+        
+        <!-- build:js /scripts/libraries/jquery.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.core.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.widget.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.mouse.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.position.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.draggable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.resizable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.sortable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.autocomplete.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.button.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.datepicker.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.dialog.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.menu.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.tabs.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.tooltip.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- build:js /scripts/libraries/kendo.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/kendo-ui/js/kendo.web.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- build:js /scripts/libraries/mustache.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/mustache/mustache.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- TODO : remove during integration -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+        
+        <script src="/scripts/smartResize.js"></script>
+        <script src="/scripts/namespace.js"></script>
+        <script src="/scripts/layout.js"></script>
+        <script src="/scripts/collapsible.js"></script>
+        <script src="/scripts/selectable.js"></script>
+        <script src="/scripts/popinFieldEditor.js"></script>
+        <script src="/scripts/tagList.js"></script>
+        <script src="/scripts/popinAllergensEditor.js"></script>
+        <script src="/scripts/attachmentsPopin.js"></script>
+        <script src="/scripts/formula.js"></script>
+
+        <script>
+        
+        //on page load
+        $(function () { 
+            //setup layout scripts
+            TraceOne.layout.init({
+                elems : {
+                    layout: "#l-layout",
+                    header : "#l-header",
+                    main: "#l-main",
+                    mainContent: "#l-main-content",
+                    sidebar : "#l-sidebar",
+                    menuToggle : "#menuToggle"
+                },
+                scrollableClass: "scrollable",
+                menuIsVisibleClass : "menu-is-visible",
+                headerMenuItemClass : ".nav-bar-item"
+            });
+            
+            //setup sidebar menu scripts
+            TraceOne.collapsible.init({
+                targetClass : "collapsible-target", //elem that will be collapsed
+                collapsibleClass : "is-collapsible", //elem that we attach the handler on
+                onChangeCallbacks : []
+            });
+
+            //setup selectable menu scripts
+            TraceOne.selectable.init({
+                selectableClass: "div.menu .selectable > li",
+                onChangeCallbacks : []
+            });
+
+            //setup formula section editors
+            TraceOne.popinFieldEditor.init({
+                container : ".edit.formula .popin-qty-editor",
+                unitRefList : [
+                    {"value":"1", "label":"mg"},
+                    {"value":"2", "label":"g"},
+                    {"value":"3", "label":"l"},
+                    {"value":"4", "label":"cm"}
+                ],
+                appendPointClass : ".l-layout",
+                imgBaseUrl : "/img/ico/"
+            });
+
+            //setup taglists
+            TraceOne.tagList.init({
+                tagContainerClass : "tag-cloud",
+                tagClass : "tag"
+            });
+
+            //setup country autocomplete
+            var countries = [
+                {"value":1, "label":"USA"},
+                {"value":2, "label":"Mexico"},
+                {"value":3, "label":"France"},
+                {"value":4, "label":"Spain"},
+                {"value":5, "label":"Italy"},
+                {"value":6, "label":"Argentina"},
+                {"value":7, "label":"Bresil"}
+            ];
+            
+            $("input.countryAutocomplete").autocomplete({
+                source: countries, 
+                select: function(e, data) {
+                    TraceOne.tagList.addTag(e, data);
+                },
+                focus: function(event, ui) {
+                    event.preventDefault;
+                    return false;
+                }
+            });
+            
+            //setup popin for allergens
+            TraceOne.popinAllergensEditor.init({
+                container : ".edit.allergens .ingredient-values",
+                appendPointClass : ".l-layout",
+                imgBaseUrl : "/img/ico/",
+                urls : {
+                    "get" : "/ingredients/load/{projectId}",
+                    "save" : "/ingredients/save/{projectId}"
+                },
+                ingredientClassNames : {
+                    "species":"ingredient-species",
+                    "ingredient":"ingredient-name",
+                    "isPublished":"ingredient-is-published"
+                },
+                customMessages : {
+                    "save" : "We were unable to save your changes",
+                    "load" : "We were unable to load the information for this ingredient"
+                }
+            });
+            
+            //setup calendars 
+            $("input.datepicker").datepicker();
+
+            //setup tooltips
+            $("a.tooltip").tooltip();
+
+            //setup popin for attaching a file/attachment to a section
+            TraceOne.attachmentsPopin.init({
+                attachmentLinkClass:"add-attachment",
+                popinId:"attachments-dialog",
+                fileRootPath: "../../files/attachments/"
+            });
+            
+            //TODO : create a wrapper class for that will initialize the kendogrid and splitter together
+            $("#grid-customers").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    serverPaging: true,
+                    serverSorting: true,
+                    sort: { field: "OrderID", dir: "desc" },
+                    pageSize: 5,
+                    transport: {
+                        read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
+                    }
+                },
+                height: "100%",
+                
+                scrollable: {
+                    //TODO : build dev scroll infini on server side
+                    virtual: true
+                },
+                
+                //scrollable : true,
+                resizable: true,
+                sortable: {
+                    allowUnsort: false
+                },
+                columns: [
+                    { field: "OrderID", title: "Order ID", width: 60 },
+                    { field: "CustomerID", title: "Customer ID", width: 90}/*,
+                    { field: "ShipName", title:"Ship Name", width: 220 },
+                    { field: "ShipAddress", title:"Ship Address", width: 280 },
+                    { field: "ShipCity", title:"Ship City", width: 110 },
+                    { field: "ShipCountry", title:"Ship Country", width: 110 }*/
+                ]
+            });
+            
+            $(".widget-split-vertical").kendoSplitter({
+                orientation: "vertical",
+                height: "100%",
+                panes: [
+                    { collapsible: false, scrollable: false, size: "170px", min:"170px", max:"300px" },
+                    { collapsible: false, scrollable: false }
+                ],
+                resize : function(e){
+                    
+                    //TODO : move some of this to an init method
+                    //Store references to grid and splitter so that they can communicate
+                    var h = this.element.data("kendoSplitter").size(".content-pane");
+                    this.element.height(h);
+                    
+                    var rowHeight = $("#grid-customers").data("kendoGrid").tbody.find("tr:first").outerHeight();
+                    
+                    if(rowHeight && h){
+                        var panelHeight = parseInt(h);
+                        var newPageSize = (Math.floor(panelHeight/rowHeight) * 2) ; //always double of space visible
+                        
+                        var s = $("#grid-customers").data("kendoGrid").dataSource.sort();
+                        $("#grid-customers").data("kendoGrid").dataSource.query({ pageSize: newPageSize, sort:s });
+                    }
+                    
+                    this.element.find(".empty-pane").height("100%");
+                    
+                }
+            });
+            
+            
+            TraceOne.formula.init({
+                tableId : "formula-ingredient-table",
+                unitRefList : [
+                    {"value":"1", "label":"mg"},
+                    {"value":"2", "label":"g"},
+                    {"value":"3", "label":"l"},
+                    {"value":"4", "label":"cm"}
+                ],
+                urls : {
+                    "get" : "/ingredient/load/",
+                    "post" : "/ingredient/update/"
+                }
+            });
+            
+            $(".editor").kendoEditor({
+                tools: [
+                    "bold",
+                    "italic",
+                    "underline"
+                ]
+            });
+            
+        });
+        </script>
+        
+</body>
+</html>

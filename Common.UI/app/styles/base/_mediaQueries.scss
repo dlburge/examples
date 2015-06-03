@@ -1,0 +1,13 @@
+@media (min-width:87.5em) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .l-sidebar {
+        margin-right: 0;
+    }
+
+    .l-main .l-main-content {
+        margin-right: $sidebar-width;
+    }
+}

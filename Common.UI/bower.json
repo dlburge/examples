@@ -1,0 +1,16 @@
+{
+  "name": "common-ui",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "bootstrap-sass-official": "~3.2.0",
+    "jquery-mockjax": "~1.5.3",
+    "jquery-ui": "~1.10.4",
+    "mustache": "~0.8.2"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "~3.0.2",
+    "bootstrap-sass-official": "~3.2.0"
+  }
+}

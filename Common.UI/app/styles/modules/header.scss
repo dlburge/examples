@@ -1,0 +1,251 @@
+// Compass modules
+//@import "compass/utilities";
+
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+
+.l-header {
+    background-color: $header-background;
+    box-shadow: #cdcdcd 0 8px 8px -8px;
+    .l-header-nav-context {
+        display: inline;
+        float: left;
+        margin: 3px 0 0 10px;
+        img {
+            margin-top: 5px;
+        }
+        li:nth-child(n+2) {
+            border-left: solid 1px #ddd;
+        }
+    }
+    .l-header-nav {
+        display: inline;
+        float: right;
+        margin: 8px 10px 0 0;
+    }
+}
+
+.nav-bar {
+    margin : 0;
+    padding : 0;
+    list-style-type: none;
+    > li {
+        position : relative;
+        display:inline-block;
+        vertical-align:middle;
+        padding : 0 10px;
+        cursor:pointer;
+        
+        .nav-bar-menu {
+            display:none;
+            position : absolute;
+            margin: 0;
+            padding: 0;
+            border: solid 2px #ddd;
+            background-color: #fff;
+            box-shadow: 3px 3px 6px #eee;
+            z-index: 5;
+            font-size : 14px;
+            
+            ul {
+                position:relative;
+                li {
+                    position: relative;
+                }
+            }
+            
+            .action-link {
+                display : block;
+                width: 100%;
+                font-weight:normal;
+                font-style:italic;
+                text-align:right;
+                padding : 3px 15px 3px 3px;
+                background-color: #eee;
+            }
+            td {
+                font-weight:normal;
+            }
+            
+            .menu-arrow {
+                position: absolute;
+                top: -13px;
+                border : none;
+            }
+            
+            a {
+                color : #000;
+                text-decoration : none;
+                &:hover {
+                    color : #000;
+                    text-decoration : underline;
+                }
+            }
+            
+        }
+        
+    }   
+}
+
+.nav-bar-menu-user {
+    width: 325px;
+    height:136px;
+    left : -40px;
+    top: 47px;
+    font-weight:bold;
+    ul {
+        padding : 0;
+        margin : 10px 0 0 130px;
+        li {
+            padding : 0;
+            list-style:none;
+            border-bottom: solid 1px #ccc;
+            &:last-child {
+                border-bottom : none;
+            }
+        }
+    }
+    
+    .userPhoto {
+        position : absolute;
+        border : solid 1px #CCC;
+        top : 8px;
+        left: 8px;
+        z-index: 10;
+    }
+    .action-link {
+        position:absolute;
+        bottom:0;
+    }
+    .menu-arrow {
+        padding: 0 175px;
+    }
+}
+
+.nav-bar-menu-notifications {
+    
+    font-weight: normal;
+    width: 450px;
+    min-height: 60px;
+    padding-bottom: 30px;
+    left : -340px;
+    top: 43px;
+    
+    img {
+        position: absolute;
+        border: solid 1px #CCC;
+        top: 5px;
+        left: 5px;
+        z-index: 10;
+    }
+    
+    div {
+        margin: 3px 0 5px 40px;
+        line-height: normal;
+        min-height: 30px;
+    }
+    
+    b {
+        font-weight: normal;
+    }
+    
+    ul {
+        padding : 0;
+        margin : 0;
+        li {
+            padding: 5px 10px;
+            list-style:none;
+            border-bottom: solid 1px #ccc;
+            &:last-child {
+                border-bottom : none;
+            }
+        }
+    }
+    
+    .menu-arrow {
+        padding: 0 345px;
+    }
+    
+    .scroll-wrapper {
+        max-height:510px;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+}
+
+.nav-bar-menu-help {
+    left : -150px;
+    width : 205px;
+    font-weight:bold;
+    top: 43px;
+    ul {
+        padding : 0;
+        margin : 0;
+        li {
+            padding: 5px 10px;
+            list-style:none;
+            border-bottom: solid 1px #ccc;
+        }
+    }
+    .menu-arrow {
+        padding: 0 160px;
+    }
+}
+
+
+/* header breadcrumb */
+.breadcrumb {
+    @include set-font-size(12px);
+    list-style: none;
+    margin : 7px 20px;
+    padding : 0;
+    color : $breadcrumb-color;
+    li {
+        display: inline;
+        a {
+            color : $breadcrumb-link-color;
+        }
+        span {
+            color : $breadcrumb-current-item;
+        }
+    }
+}
+
+/***
+    MODULE User : used in header, BUT MAY BE PLACED ANYWHERE
+**/
+.user {
+    display:block;
+    @include set-font-size(13px);
+    overflow:hidden;
+    margin: 0;
+    > figcaption {
+        float:left;
+        padding : 3px 10px 0 0;
+        text-align:right;
+        strong {
+            @include set-font-size(15px, 0.65);
+            display:block; //force two lines for name and position
+        }    
+    }
+    img {
+        //NOTE : make sure icons and "portrait" are same size (36*36)
+        width:36px;
+        height: 36px;
+    }
+}
+
+.user-in-list {
+    img {
+        float: left;
+    }
+    > figcaption {
+        padding: 3px 0 0 10px;
+        text-align: left;
+    }
+}

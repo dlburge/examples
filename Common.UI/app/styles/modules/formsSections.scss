@@ -1,0 +1,541 @@
+// Compass modules
+//@import "compass/css3/border-radius";
+//@import "compass/css3/images";
+
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+//Forms
+//sections => Top level
+.section {
+    border : none;
+    padding : 2px 0 14px 5px;
+    margin : 0 0 25px 0;
+    border-left : solid 4px #FFF;
+    cursor:pointer;
+    .section-title {
+        @include set-font-size(18px);
+        color : $fieldset-legend-color;
+        font-weight:bolder;
+        text-transform:uppercase;
+        padding: 5px 10px 6px 40px;
+        margin-left : -45px;
+        //@include border-radius(4px 4px 0 4px);
+        border-radius: 4px 4px 0 4px;
+        position : relative;
+        cursor:pointer;
+    }
+    hr {
+        height: 0;
+        margin: -8px 0 0 -4px;
+        background-color : #FFF;
+        border: none;
+        @include double-border;
+    }
+    .scrollable {
+        overflow-x: auto;
+        width: 650px;
+    }
+    &:hover {
+        border-left : solid 4px #09b7c5;
+        .section-title {
+            background-color:#FFF;
+        }
+    }
+}
+
+.no-border {
+    border : none;
+    &:hover {
+        border:none;
+    }
+}
+
+.section.popin {
+    margin-left : 0;
+    padding-left : 0;
+    &:hover {
+        border-left : solid 3px #FFF;
+    }
+    .section-title {
+        margin-left : 0;
+        padding-left : 0;
+    }
+}
+
+
+.delete-section {
+    .section-title {
+        .delete {
+            visibility:hidden;
+            width : auto;
+            height: auto;
+            border : none;
+            padding : 3px 2px 3px 2px;
+            margin : 0;
+            position:absolute;
+            background-color : #09b7c5;
+            //@include border-radius(4px 0 0 4px);
+            border-radius: 4px 0 0 4px;
+
+
+            left : -8px;
+            top : 0;
+            &:hover {
+                background-color : #F00;
+            }
+        }
+    }
+    &:hover {
+        .section-title {
+            color : #FFF;
+            background-color : #09b7c5;
+            .delete {
+                visibility:visible;
+            }
+        }
+    }
+}
+
+.selected-section {
+    .section-title {
+        background-color : #FFF;
+    }
+    border-left : 4px double #09b7c5;
+    &:hover {
+        border-left : 4px double #09b7c5;
+    }
+}
+
+.section-level-1 {
+    padding : 10px 0 0 0;
+    margin : 20px 0 0 0;
+    border-left : none;
+    &:hover {
+        border-left : none;
+    }
+    .section-title {
+        padding : 1px 0 2px 30px;
+        margin-left : -35px;
+        text-transform:none;
+        font-weight:lighter;
+        color : $fieldset-sub-legend-color;
+        //background-color: #FFF;
+    }
+    hr {
+        height: 0;
+        margin: -11px 0 0 -4px;
+        background-color : #FFF;
+        border: none;
+        @include simple-border;
+    }
+}
+
+.section-level-2 {
+    border-left : $fieldset-sub-border;
+    border-top : $fieldset-sub-border;
+    &:hover {
+        border-left : $fieldset-sub-border;
+    }
+    padding : 2px 0 0 8px;
+    margin-top : 15px;
+    .section-title {
+        @include set-font-size(13px, 0.75);
+        margin-left : -28px;
+        border: none;
+        padding : 1px 10px 2px 28px;
+        width:auto;
+        text-transform:none;
+        font-weight:lighter;
+    }
+}
+
+.anchor-target {
+    display: block;
+    height: 5px;
+    margin-top: -5px;
+    visibility: hidden;
+}
+
+.anchor-link {
+    font-size : 0.75em;
+    color: #809913;
+}
+
+.field-image {
+    @include set-font-size(12px);
+    float:right;
+    width:200px;
+    vertical-align:top;
+    border : none;
+    overflow:hidden;
+    img {
+        border : none;
+        width : 150px;
+        height : auto;
+    }
+    input {
+        width : 200px;
+    }
+}
+
+.field {
+    margin:8px 0;
+    vertical-align:top;
+    @include set-font-size(13px, 0.75);
+    label {
+        color : $field-label-color;
+        vertical-align:top;
+        //width:165px; //TODO : 175px was defined but currently too long for two columns
+        width:145px;
+        margin-right : 5px;
+        display:inline-block;
+        &.full-label {
+            width:auto;
+        }
+    }
+    input, select, textarea {
+        vertical-align:top;
+        color : $field-input-color;
+        border : $field-input-border;
+        width: 275px;
+        //@include border-radius(3px);
+        border-radius: 3px;
+        padding : 3px 2px;
+        &:focus {
+            border : $field-input-focus-border;
+            outline: none;
+        }
+    }
+    select {
+        padding : 2px;
+    }
+    .checkbox-container {
+        vertical-align:top;
+        display : inline-block;
+        width: 277px; //add width of input border to keep alignment
+        label {
+            display : inline;
+        }
+    }
+    .text-value {
+        vertical-align:top;
+        color : $field-text-value-color;
+        display: inline-block;
+    }
+}
+
+.multi-line {
+    label {
+        float : left;
+    }
+    .text-value {
+        float : left;
+        width : 65%;
+    }
+}
+
+.field-double-input {
+    white-space:nowrap;
+}
+
+//Force to column, reset default widths for labels and inputs (no fixed width, adapts to content and screen width)
+.column {
+    display:inline-block;
+    margin : 8px 25px 0 0;
+    min-width: 325px;
+    input, select, textarea {
+        width:150px;
+    }
+    .checkbox-container {
+        width:152px;
+    }
+    .text-value {
+        width:150px;
+        display:inline-block;
+    }
+}
+.column-right {}
+
+//label and field sizes
+.field .full {
+    width : 75%;
+}
+.field .large {
+    width : 275px
+}
+.field .medium {
+    width : 125px;
+}
+.field .small {
+    width : 75px;
+}
+.field .x-small {
+    width : 45px;
+}
+.field .xx-small {
+    width : 25px;
+}
+
+//input sizes inside of tables
+.editable-table .full {
+    width : 100%;
+}
+.editable-table .large {
+    width : 205px;
+}
+.editable-table .medium {
+    width : 85px;
+}
+.editable-table .small {
+    width : 65px;
+}
+.editable-table .x-small {
+    width : 45px;
+}
+.editable-table .xx-small {
+    width : 25px;
+}
+
+.telephone {
+    width : 94px;
+}
+
+.numeric {
+    text-align:center;
+}
+
+//set all fields in an element to the same size
+.large-fields {
+    input[type="text"], select, textarea {
+        width:205px;
+    }
+}
+.medium-fields {
+    input[type="text"], select, textarea {
+        width:85px;
+    }
+}
+.small-fields {
+    input[type="text"], select, textarea {
+        width:65px;
+    }
+}
+.x-small-fields {
+    input[type="text"], select, textarea {
+        width:45px;
+    }
+}
+.xx-small-fields {
+    input[type="text"], select, textarea {
+        width:25px;
+    }
+}
+
+.large-paragraph,
+.field .large-paragraph {
+    width: 90%;
+    height: 100px;
+}
+
+.center-align {
+    text-align : center;
+}
+
+//align all fields in an element identically
+.center-align-fields {
+    input[type="text"], select, td, th {
+        text-align:center;
+    }
+}
+
+.left-align-fields {
+    input[type="text"], select, td, th {
+        text-align:left;
+    }
+    .center-align {
+        text-align : center;
+    }
+}
+
+.top-align-cells {
+    input[type="text"], select, td, th {
+        vertical-align:top;
+    }
+}
+
+.ui-autocomplete {
+    z-index: 9999;
+}
+
+.add-new-item {
+    font-size: 0.75rem;
+    color : #809913;
+    font-weight:bold;
+    text-decoration:underline;
+    &:hover {
+        text-decoration:none;
+    }
+}
+
+.addFile,
+.add-attachment {
+    white-space:nowrap;
+    color: #809913;
+}
+
+//placeholder text styles
+::-webkit-input-placeholder {
+    color : $field-placeholder-color;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color : $field-placeholder-color;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color : $field-placeholder-color;
+}
+:-ms-input-placeholder {
+    color : $field-placeholder-color;
+}
+
+.tag-link {
+    display:inline-block;
+    background-color:#eee;
+    padding: 0 5px 0 8px;
+    margin: 1px 5px 2px 0;
+    line-height: 2.00em;
+    //@include border-radius(3px);
+    border-radius: 3px;
+    white-space:nowrap;
+    &:hover {
+        background-color:#ddd;
+    }
+    .delete {
+        width : 15px;
+        display:inline-block;
+        background: url("../../img/ico/ico-tag.png") no-repeat 0 center transparent;
+        text-decoration:none;
+        &:hover {
+            background: url("../../img/ico/ico-tag-delete.png") no-repeat 0 center transparent;
+            text-decoration:none;
+        }
+    }
+}
+
+.tooltip {
+    padding-right : 22px;
+    background: url("../../img/ico/ico-tooltip.png") no-repeat right center transparent;
+}
+
+
+//NOTE : reset attributes for radios and checkboxes - NOTE : must be after all other form styles
+input[type=radio], input[type=checkbox] {
+    width:auto;
+    border : none;
+    &:focus {
+        border : none;
+    }
+}
+
+//create additional vertical space between elements as needed
+.vertical-spacer {
+    line-height: 0.75rem;
+    padding : 0;
+    margin : 0
+}
+
+
+//specific for "add components" page
+.resultList {
+    margin : 15px;
+    display:block;
+}
+
+.resultList-with-scroll {
+    height: 220px;
+    overflow-y: auto;
+}
+
+.component-link {
+    color : #666;
+    text-decoration:none;
+    background: url("../../img/ico/ico-tag.png") no-repeat 6px center #eee;
+
+    display: inline-block;
+    padding: 0 8px 0 25px;
+    margin: 1px 5px 2px 0;
+    line-height: 2.00em;
+
+    border-radius: 3px;
+
+    white-space: nowrap;
+
+}
+.component-link:hover {
+    color : #666;
+    text-decoration:none;
+    background: url("../../img/ico/ico-tag-delete.png") no-repeat 6px center #ddd;
+}
+
+.field.createButton {
+    padding : 15px 15px 15px 0;
+    a {
+        color: #809913;
+        font-weight: bold;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.addItem {
+    a {
+        color : #809913;
+        padding-left : 20px;
+        background : transparent url("../../themes/NENA/Images/lnk_addItem.png") no-repeat 0 center;
+        span {
+            color: #999;
+            @include set-font-size(14px);
+        }
+    }
+    &:hover {
+        text-decoration : underline;
+    }
+    &.selected {
+        background-color: #e7e7e7;
+    }
+}
+
+ul.resultList {
+    padding : 0;
+    li {
+        list-style:none;
+    }
+}
+
+.ingredient-list {
+    margin: 10px 0;
+    padding: 0;
+    li {
+        list-style:none;
+        .ingredient {
+            text-decoration:none;
+            color : #333;
+            &:hover {
+                color : #333;
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+em.ico-field-required {
+    color:#d2322d
+}
+
+.ui-menu-item {
+    font-size: 0.75rem;
+}

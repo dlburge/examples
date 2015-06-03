@@ -1,0 +1,44 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+
+.widget {
+    margin: 0 0 25px;
+    padding: 0;
+    
+    .widget-title-wrap {
+        @include double-border(8px);
+        position: relative;
+        padding : 5px 0;
+        .widget-title {
+            @include set-font-size(18px);
+            color: $fieldset-legend-color;
+            font-weight: bolder;
+            text-transform: uppercase;
+            padding-left: 25px;
+            margin: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        .view-all {
+            position: absolute;
+            top: 3px;
+            right: 0;
+            color : #999;
+            padding : 5px;
+            @include set-font-size(12px);
+        }
+    }
+    
+    .widget-content {
+        margin-top: 10px;
+        padding: 5px 5px 5px 10px;
+    }
+    
+    .is-closed.level-1,
+    .is-open.level-1 {
+        background-position: 0;
+    }
+}

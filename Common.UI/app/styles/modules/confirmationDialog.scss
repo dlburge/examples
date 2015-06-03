@@ -1,0 +1,36 @@
+/* Custom styles for confirmation dialog */
+.confirmationDialog {
+    
+    border: solid 2px #ddd;
+    
+    .ui-dialog-titlebar {
+        display:none;
+    }
+    .ui-dialog-content {
+        padding: 10px;
+    }
+    .ui-dialog-buttonpane {
+        padding: 0px;
+        border: 0px;
+    }
+    .ui-button-text {
+        padding: 0px;
+    }
+    .button.okButton, 
+    .button.cancelButton {
+        color: #809913;
+        background-color: #FFF;
+        border: solid 1px #e4e4e4;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        padding: 3px 10px;
+        margin-left: 5px;
+    }
+    button.cancelButton {
+        background-color: #EEE;
+    }
+    
+}

@@ -1,0 +1,26 @@
+#content {
+    margin : 10px;
+    border : solid 1px #000;
+    padding : 10px;
+}
+
+#radar {
+    display : inline-block;
+}
+
+#controls {
+    display : inline-block;
+    vertical-align : top;
+    margin-left : 15px;
+}
+
+#controls li {
+    padding : 5px 0px;
+}
+
+#controls li span {
+    display: inline-block;
+    width : 15px;
+    height : 15px;
+    opacity: 0.70;
+}

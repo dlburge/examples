@@ -1,0 +1,55 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+
+.l-layout {
+    position: relative;
+}
+
+.l-header {
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    @include position-fixed;
+}
+
+.l-main {
+    z-index: 1;
+    width: 100%;
+    @include position-fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 55px 0 0;
+}
+
+.l-main .l-main-content {
+    height: 100%;
+    margin-right: 0;
+    padding: 15px 35px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.l-sidebar {
+    z-index: 1;
+    width: $sidebar-width;
+    height: 100%;
+    padding: 55px 0 0;
+    margin-right: $content-right-margin;
+    @include position-fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.l-sidebar .l-sidebar-content {
+    padding: 25px 15px 15px;
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

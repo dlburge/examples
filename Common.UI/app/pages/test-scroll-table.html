@@ -1,0 +1,466 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>HTML</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/favicon.ico">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <!-- custom styles/themes for external libraries --> 
+        
+        <!-- build:css /styles/themes/jquery-ui/jquery-ui.css -->
+        <link rel="stylesheet" href="/styles/themes/jquery-ui/jquery-ui-1.10.4.custom.min.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+        <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/kendo-ui/kendo-ui.css -->
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.core.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.default.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.silver.min.css">
+        <!-- endbuild -->
+        
+        <link rel="stylesheet" href="/styles/base/base.css">
+        <link rel="stylesheet" href="/styles/layout/layout.css">
+        <link rel="stylesheet" href="/styles/modules/header.css">
+        <link rel="stylesheet" href="/styles/modules/sidebar.css">
+        <link rel="stylesheet" href="/styles/modules/searchbox.css">
+        <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+        <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+        <link rel="stylesheet" href="/styles/modules/kpiBar.css">
+        <link rel="stylesheet" href="/styles/modules/languageSelector.css">
+        <link rel="stylesheet" href="/styles/modules/kendoGridDashboard.css">
+        <link rel="stylesheet" href="/styles/modules/messages.css">
+        <link rel="stylesheet" href="/styles/modules/widget.css">
+        <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+        <link rel="stylesheet" href="/styles/modules/confirmationDialog.css">
+        <link rel="stylesheet" href="/styles/modules/section.css">
+        <link rel="stylesheet" href="/styles/modules/forms.css">
+        <link rel="stylesheet" href="/styles/modules/editableTable.css">
+        <link rel="stylesheet" href="/styles/modules/formula.css">
+        <link rel="stylesheet" href="/styles/modules/tagcloud.css">
+        <link rel="stylesheet" href="/styles/modules/tooltip.css">
+        <link rel="stylesheet" href="/styles/modules/autocomplete.css">
+        
+    </head>
+    <body>
+        
+        <div class="l-layout menu-is-visible" id="l-layout">
+            
+            
+            <!-- START : Main content -->
+            <main class="l-main" id="l-main">
+                <div class="l-main-content" id="l-main-content">
+                    
+                    <!-- Page header -->
+                    <header class="page-summary">
+                        <h1 class="page-summary-title">Proposition 1</h1>
+                        <p class="page-summary-info">Créé par Julien Durand le 02/09/2013 - Modifié par Julien Durand le 23/09/2013</p>    
+                    </header>
+                    
+                    <!-- START : Sections -->
+                    <span class="anchor-target" id="section-prod-id"></span>
+                    <fieldset class="section selected-section"></fieldset>
+                        <legend class="section-title is-collapsible is-open level-1">Product Identification</legend>
+                        <hr>
+                        <div class="collapsible-target">
+                            
+                            <div style="position: relative; margin-bottom: 20px; overflow: hidden; border-right: 1px solid #ccc;">
+                                <div style="overflow:scroll; overflow-y:hidden">
+
+                                    <table class="editable-table ingredients edit x-small-fields center-align-fields" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col class="highlight">
+                                            <col>
+                                            <col span="4" class="highlight">
+                                            <col>
+                                            <col span="4" class="highlight">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th class="delete-row empty">&nbsp;</th>
+                                            <th class="editable-table-title" rowspan="2">Nutrients</th>
+                                            <th rowspan="2">Unrounded amount per 100g or 100ml</th>
+                                            <th rowspan="2">Unrounded amount per serving</th>
+                                            <th colspan="4">Rounded amount per</th>
+                                            <th rowspan="2">Source of Data Calc or Analytical</th>
+                                            <th colspan="4">% of Daily value</th>
+                                            <th rowspan="2">Not significant source</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="delete-row empty">&nbsp;</th>
+                                            <th>100</th>
+                                            <th>Serving</th>
+                                            <th>Additional serving 1</th>
+                                            <th>Additional serving 2</th>
+                                            <th>100</th>
+                                            <th>Serving</th>
+                                            <th>Additional serving 1</th>
+                                            <th>Additional serving 2</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr>
+                                            <td colspan="14"><a href="#" id="" name="">+ Add new line</a></td>
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tr class="category">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td class="category-title">Mandatory</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Calories (kcal)</td>
+                                            <td><input name="" id="" type="text" value="283"></td>
+                                            <td><input name="" id="" type="text" value="352"></td>
+                                            <td><input name="" id="" type="text" value="352"></td>
+                                            <td><input name="" id="" type="text" value="352"></td>
+                                            <td><input name="" id="" type="text" value="352"></td>
+                                            <td><input name="" id="" type="text" value="352"></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Calories from Fat (kcal)</td>
+                                            <td><input name="" id="" type="text" value="98"></td>
+                                            <td><input name="" id="" type="text" value="139"></td>
+                                            <td><input name="" id="" type="text" value="139"></td>
+                                            <td><input name="" id="" type="text" value="139"></td>
+                                            <td><input name="" id="" type="text" value="139"></td>
+                                            <td><input name="" id="" type="text" value="139"></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="is-collapsible is-open level-3-child">
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td class="ico-holder">Total Fat (g)</td>
+                                            <td><input name="" id="" type="text" value="15.5"></td>
+                                            <td><input name="" id="" type="text" value="15.5"></td>
+                                            <td><input name="" id="" type="text" value="15"></td>
+                                            <td><input name="" id="" type="text" value="15.5"></td>
+                                            <td><input name="" id="" type="text" value="15.5"></td>
+                                            <td><input name="" id="" type="text" value="15"></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value="24%"></td>
+                                            <td><input name="" id="" type="text" value="24%"></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Saturated Fat (g)</td>
+                                            <td><input name="" id="" type="text" value="6.4"></td>
+                                            <td><input name="" id="" type="text" value="6.4"></td>
+                                            <td><input name="" id="" type="text" value="6"></td>
+                                            <td><input name="" id="" type="text" value="6.4"></td>
+                                            <td><input name="" id="" type="text" value="6"></td>
+                                            <td><input name="" id="" type="text" value="6.4"></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value="32%"></td>
+                                            <td><input name="" id="" type="text" value="32%"></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Polyunsaturated Fat (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="is-collapsible is-open level-4-child collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td class="ico-holder">Monounsaturated Fat (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+
+                                        <tr class="collapsible-target child-row child-row-l2">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Test item in level 4</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+
+                                        <tr class="collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Cholesterol (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Sodium (mg)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="is-collapsible is-open level-3-child">
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td class="ico-holder">Carbohydrates (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Dietary Fiber (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="collapsible-target child-row">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td>Sugars (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>&nbsp;</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Protein (g)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr class="category">
+                                            <td class="delete-row empty">&nbsp;</td>
+                                            <td class="category-title">Other nutrients</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Vitamin C (60 mg)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Vitamin B6 (mg)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="delete-row"><img name="" id="" src="/img/ico/ico-delete.png"></td>
+                                            <td>Magnesium (mg)</td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td>
+                                                <select class="small" name="" id="">
+                                                    <option value="">option 1</option>
+                                                    <option value="">option 2</option>
+                                                </select>
+                                            </td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="text" value=""></td>
+                                            <td><input name="" id="" type="checkbox" value=""></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </main>
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,918 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>HTML</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/favicon.ico">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- custom styles/themes for external libraries -->
+
+        <!-- build:css /styles/themes/jquery-ui/jquery-ui.css -->
+        <link rel="stylesheet" href="/styles/themes/jquery-ui/jquery-ui-1.10.3.custom.min.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/bootstrap/bootstrap.css -->
+        <link rel="stylesheet" href="/styles/themes/bootstrap/bootstrap.css">
+        <!-- endbuild -->
+        <!-- build:css /styles/themes/kendo-ui/kendo-ui.css -->
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css">
+        <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.silver.min.css">
+        <!-- endbuild -->
+
+        <link rel="stylesheet" href="/styles/base/base.css">
+        <link rel="stylesheet" href="/styles/layout/layout.css">
+        <link rel="stylesheet" href="/styles/modules/header.css">
+        <link rel="stylesheet" href="/styles/modules/sidebar.css">
+        <link rel="stylesheet" href="/styles/modules/pageSummary.css">
+        <link rel="stylesheet" href="/styles/modules/menuToggle.css">
+        <link rel="stylesheet" href="/styles/modules/kpiBar.css">
+        <link rel="stylesheet" href="/styles/modules/languageSelector.css">
+        <link rel="stylesheet" href="/styles/modules/kendoGridDashboard.css">
+        <link rel="stylesheet" href="/styles/modules/messages.css">
+        <link rel="stylesheet" href="/styles/modules/widget.css">
+        <link rel="stylesheet" href="/styles/modules/breadcrumb.css">
+        <link rel="stylesheet" href="/styles/modules/confirmationDialog.css">
+        <link rel="stylesheet" href="/styles/modules/formsSections.css">
+        <link rel="stylesheet" href="/styles/modules/formula.css">
+        <link rel="stylesheet" href="/styles/modules/tagList.css">
+
+        <!--[if IE 8]>
+        <link rel="stylesheet" href="/styles/compatibility/ie8.css">
+        <![endif]-->
+
+        <!-- build:js /scripts/libraries/modernizr.js -->
+        <script src="../bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+    </head>
+    <body>
+
+        <div class="l-layout menu-is-visible" id="l-layout">
+
+            <!-- START : Header -->
+            <header class="l-header" id="l-header">
+
+                <nav class="l-header-nav-context">
+                    <ul class="nav-bar">
+                        <li>
+                            <a href="/index.html"><img class="header-logo" src="/img/logo.png" width="41" height="41" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-projects.png" width="21" height="27" alt="" /></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="l-header-nav">
+                    <ul class="nav-bar">
+                        <li class="nav-bar-item">
+                            <figure class="user">
+                                <figcaption>
+                                    <strong>Cyril ddd Maître</strong>
+                                    Chef de marché
+                                </figcaption>
+                                <img src="/img/portait.png" width="30" height="30" alt="" />
+                            </figure>
+                            <div class="nav-bar-menu nav-bar-menu-user">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+                                <img width="110" height="110" class="userPhoto" src="/img/ico/ico-user-lg.png">
+                                <ul class="user-profile-menu">
+                                    <li><a href="#">View profile</a></li>
+                                    <li><a href="#">My company</a></li>
+                                    <li>
+                                        <div id="language-selector" class="language-selector">
+                                            <ul>
+                                                <li><a href="#" class="fr-FR">français (France)</a></li>
+                                                <li class="active-language"><a href="#" class="en-US">English (United States)</a></li>
+                                                <li><a href="#" class="de-DE">Deutsch (Deutschland)</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="action-link" href="https://10.231.100.153/NextRelease/TraceOne.STS/?wa=wsignout1.0&amp;wreply=https://10.231.100.153/NextRelease/drupal/t1sso/logout">Sign out</a>
+                            </div>
+                        </li>
+                        <li class="nav-bar-item">
+                            <a href="#"><img src="/img/ico/ico-message.png" width="30" height="30" alt="" /></a>
+                            <div class="nav-bar-menu nav-bar-menu-notifications">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+
+                                <div class="scroll-wrapper">
+
+                                    <ul class="" style="">
+            <li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9849" title="test">test</a> on <b>6/3/2014 2:37:52 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9825" title="test_mada_306">test_mada_306</a> on <b>6/3/2014 2:29:45 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9815" title="Egg">Egg</a> on <b>6/3/2014 9:32:10 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9815" title="Egg">Egg</a> on <b>6/3/2014 9:28:54 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9789" title="ABR Versioning 0206 1707">ABR Versioning 0206 1707</a> on <b>6/3/2014 9:25:16 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9789" title="ABR Versioning 0206 1707">ABR Versioning 0206 1707</a> on <b>6/3/2014 9:25:08 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9789" title="ABR Versioning 0206 1707">ABR Versioning 0206 1707</a> on <b>6/2/2014 6:44:16 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9735" title="pizza">pizza</a> on <b>6/2/2014 2:44:54 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9739" title="bread">bread</a> on <b>6/2/2014 2:43:46 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9737" title="tomate sauce">tomate sauce</a> on <b>6/2/2014 2:43:36 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9735" title="pizza">pizza</a> on <b>6/2/2014 2:43:24 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9719" title="Fozen Mixed Vegetables">Fozen Mixed Vegetables</a> on <b>6/2/2014 11:53:49 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9719" title="Fozen Mixed Vegetables">Fozen Mixed Vegetables</a> on <b>6/2/2014 11:50:54 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9719" title="Fozen Mixed Vegetables">Fozen Mixed Vegetables</a> on <b>6/2/2014 11:50:44 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9719" title="Fozen Mixed Vegetables">Fozen Mixed Vegetables</a> on <b>6/2/2014 11:33:01 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9703" title="NGA - DE 82777">NGA - DE 82777</a> on <b>6/2/2014 10:02:04 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9703" title="NGA - DE 82777">NGA - DE 82777</a> on <b>6/2/2014 10:01:23 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9703" title="NGA - DE 82777">NGA - DE 82777</a> on <b>6/2/2014 10:01:17 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9703" title="NGA - DE 82777">NGA - DE 82777</a> on <b>6/2/2014 9:42:57 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9703" title="NGA - DE 82777">NGA - DE 82777</a> on <b>6/2/2014 9:42:25 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9639" title="test">test</a> on <b>5/30/2014 11:21:58 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/29/2014 2:59:17 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/29/2014 2:59:09 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 5:04:33 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 4:27:09 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 4:25:41 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 4:22:19 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 2:20:31 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 2:05:22 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 2:03:59 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 2:02:51 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 2:01:47 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9643" title="test">test</a> on <b>5/28/2014 1:57:19 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9641" title="test">test</a> on <b>5/28/2014 1:57:12 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9649" title="test_+++">test_+++</a> on <b>5/28/2014 1:57:01 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 1:56:37 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 1:54:47 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9629" title="6">6</a> on <b>5/28/2014 1:50:51 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:49:33 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:48:40 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:45:50 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:43:53 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:42:23 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:38:28 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:37:38 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:33:58 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:31:35 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9619" title="test_mada">test_mada</a> on <b>5/28/2014 1:29:35 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:23:24 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 1:22:21 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9575" title="test">test</a> on <b>5/28/2014 1:10:56 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 12:38:40 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 11:46:00 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 11:44:57 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 11:40:13 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 11:38:51 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> deleted project <a href="/NextRelease/Dashboard/Home/Edit/9573" title="test_mada_2805">test_mada_2805</a> on <b>5/28/2014 11:20:56 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 11:09:41 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 11:05:13 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 11:04:05 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9589" title="RChocolate Cake">RChocolate Cake</a> on <b>5/28/2014 11:03:17 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9587" title="RChocolate">RChocolate</a> on <b>5/28/2014 11:02:47 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9521" title="Cinnamon and raisin bagel">Cinnamon and raisin bagel</a> on <b>5/28/2014 10:28:03 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9521" title="Cinnamon and raisin bagel">Cinnamon and raisin bagel</a> on <b>5/28/2014 10:26:10 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9559" title="SB Test280514">SB Test280514</a> on <b>5/28/2014 9:34:00 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9545" title="MyTestR28May">MyTestR28May</a> on <b>5/28/2014 9:17:57 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9545" title="MyTestR28May">MyTestR28May</a> on <b>5/28/2014 9:04:48 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/27/2014 4:00:29 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> duplicated project <a href="/NextRelease/Dashboard/Home/Edit/9531" title="ABR Versioning 2705 1051">ABR Versioning 2705 1051</a> on <b>5/27/2014 3:32:20 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/27/2014 3:41:17 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9531" title="ABR Versioning 2705 1051">ABR Versioning 2705 1051</a> on <b>5/27/2014 3:31:33 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> duplicated project <a href="/NextRelease/Dashboard/Home/Edit/9490" title="ABR Versioning 2705 1051">ABR Versioning 2705 1051</a> on <b>5/27/2014 3:27:00 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> duplicated project <a href="/NextRelease/Dashboard/Home/Edit/9521" title="Cinnamon and raisin bagel">Cinnamon and raisin bagel</a> on <b>5/27/2014 3:10:18 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9460" title="Triple Chocolate Cookies 5pk">Triple Chocolate Cookies 5pk</a> on <b>5/27/2014 1:20:57 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9464" title="Lemon icecream">Lemon icecream</a> on <b>5/27/2014 10:30:17 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9460" title="Triple Chocolate Cookies 5pk">Triple Chocolate Cookies 5pk</a> on <b>5/27/2014 10:24:48 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9460" title="Triple Chocolate Cookies 5pk">Triple Chocolate Cookies 5pk</a> on <b>5/27/2014 10:24:34 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9460" title="Triple Chocolate Cookies 5pk">Triple Chocolate Cookies 5pk</a> on <b>5/27/2014 10:15:04 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9460" title="Triple Chocolate Cookies 5pk">Triple Chocolate Cookies 5pk</a> on <b>5/27/2014 10:14:08 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9440" title="6pk Chocolate Cup Cakes">6pk Chocolate Cup Cakes</a> on <b>5/27/2014 9:48:13 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9430" title="Pizza Formula">Pizza Formula</a> on <b>5/27/2014 8:38:27 AM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/26/2014 4:38:25 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9424" title="test anda 8">test anda 8</a> on <b>5/26/2014 4:38:18 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9336" title="test anda 6">test anda 6</a> on <b>5/26/2014 3:52:05 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> updated project <a href="/NextRelease/Dashboard/Home/Edit/9336" title="test anda 6">test anda 6</a> on <b>5/26/2014 3:51:53 PM</b></div>
+
+            </li><li ng-repeat="item in notifications" class="ng-scope">
+                <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9418" title="Tomato juice">Tomato juice</a> on <b>5/26/2014 3:47:51 PM</b></div>
+
+            </li>
+
+        </ul>
+
+                                    <ul>
+                                        <li ng-repeat="item in notifications" class="ng-scope">
+                                        <img data-ng-src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small" src="https://int.traceone.net/NextRelease/drupal/dunatis_get_picture/users/c60f93e6-2280-4dc8-821e-f28a14592d38/dunatis_user_small">
+                                        <div data-ng-bind-html="item.Description" class="ng-binding"><b>Example Manufacturer</b> created project <a href="/NextRelease/Dashboard/Home/Edit/9849" title="test">test</a> on <b>6/3/2014 2:37:52 PM</b></div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>0 notifications</li>
+                                    </ul>
+                                </div>
+
+                                <a class="action-link" href="#">View all notifications</a>
+                            </div>
+                        </li>
+                        <!-- TODO :
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-people.png" width="30" height="30" alt="" /></a>
+                            <ul class="nav-bar-menu">
+                                <li><a href="#">Fournisseurs</a></li>
+                                <li><a href="#">Client</a></li>
+                                <li><a href="#">Groupe</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/img/ico/ico-modules.png" width="29" height="29" alt="" /></a>
+                            <ul class="nav-bar-menu">
+                                <li><a href="#">Enquetes</a></li>
+                                <li><a href="#">PLM</a></li>
+                                <li><a href="#">Dictionnaire</a></li>
+                                <li><a href="#">Actualités</a></li>
+                                <li><a href="#">Brief</a></li>
+                            </ul>
+                        </li>
+                        -->
+                        <li class="nav-bar-item">
+                            <a href="#"><img src="/img/ico/ico-help-question.png" width="30" height="30" alt="" /></a>
+                            <div class="nav-bar-menu nav-bar-menu-help">
+                                <img class="menu-arrow" src="../../img/ico/ico-arrow-popin.png">
+                                <ul>
+                                    <li><a href="#">T product-space Help</a></li>
+                                    <li><a href="#">Aide en ligne</a></li>
+                                    <li><a href="#">E-learning</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
+            <!-- END : Header -->
+
+            <!-- START : Main content -->
+            <main class="l-main" id="l-main">
+                <div class="l-main-content" id="l-main-content">
+
+                    <!-- Page header -->
+                    <header class="page-summary">
+                        <h1 class="page-summary-title">T-PRODUCT SPACE</h1>
+                        <p class="page-summary-info">Créé par Julien Durand le 02/09/2013 - Modifié par Julien Durand le 23/09/2013</p>
+                    </header>
+
+                    <!-- KPI -->
+                    <div class="kpi-bar">
+                        <h2 class="kpi-bar-title">Projects Overview</h2>
+                        <ul class="kpi-bar-items">
+                            <li>
+                                <a href="#">
+                                    <span class="count">20</span>
+                                    Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="count">16</span>
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="count">6</span>
+                                    Internals
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- grid layout for widgets -->
+                    <div class="l-grid container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="widget">
+
+                                    <div class="widget-title-wrap">
+                                        <h2 class="widget-title is-collapsible is-open level-1">PROJECTS</h2>
+                                        <a href="#" class="view-all">View all</a>
+                                    </div>
+                                    <div class="widget-content collapsible-target">
+                                        <div id="grid-customers"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="widget">
+                                    <div class="widget-title-wrap">
+                                        <h2 class="widget-title is-collapsible is-open level-1">Widget 2</h2>
+                                        <a href="#" class="view-all">View all</a>
+                                    </div>
+                                    <div class="widget-content collapsible-target">
+                                        dqsdfqdsf qsdf
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="widget">
+                                <div class="widget-title-wrap">
+                                    <h2 class="widget-title is-collapsible is-open level-1">Widget 3</h2>
+                                    <a href="#" class="view-all">View all</a>
+                                </div>
+                                <div class="widget-content collapsible-target">
+                                    dqsdfqdsf qsdf
+                                </div>
+
+                            </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="widget">
+                                    <div class="widget-title-wrap">
+                                        <h2 class="widget-title is-collapsible is-open level-1">Widget 4</h2>
+                                        <a href="#" class="view-all">View all</a>
+                                    </div>
+                                    <div class="widget-content collapsible-target">
+                                        dqsdfqdsf qsdf
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </main>
+            <!-- END : Main content -->
+
+            <!-- START : Sidebar -->
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuToggle" class="menu-toggle">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <aside class="l-sidebar" id="l-sidebar">
+                <div class="l-sidebar-content">
+                    <form action="#" name="search-box-form">
+                    <div class="menu">
+                        <input class="search-box-field" name="global-search" id="global-search" type="text" value="">
+                        <input class="search-box-button" type="image" src="/img/ico/ico-search.png">
+                    </div>
+                    </form>
+
+                    <!-- START : Menu "Who" -->
+                    <div class="menu who">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Communities</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li>
+                                    <span class="is-collapsible is-open">Suppliers</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Supplier 1</a></li>
+                                        <li><a href="#">Supplier 2</a></li>
+                                        <li><a href="#">Supplier 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="is-collapsible is-open">Clients</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Client 1</a></li>
+                                        <li class="selected"><a href="#">Client 2</a></li>
+                                        <li><a href="#">Client 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "Who" -->
+
+                    <!-- START : Menu "When" -->
+                    <div class="menu when">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>When</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li><a href="#">Today</a></li>
+                                <li><a href="#">Yesterday</a></li>
+                                <li><a href="#">Last week</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "When" -->
+
+                    <!-- START : Menu "What" -->
+                    <div class="menu what">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Projects</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+
+                            <form class="viewer">
+                                <fieldset>
+                                <input class="viewer-bt" type="image" src="/img/ico/ico-viewer.png" alt="Submit" />
+                                <select class="viewer-select" name="">
+                                    <option value="0">Espace privé</option>
+                                    <option value="1">Input</option>
+                                    <option value="2">Output</option>
+                                </select>
+                                <select class="viewer-select" name="">
+                                    <option value="3">Liste des notifications</option>
+                                    <option value="0">Sections</option>
+                                    <option value="1">Statut</option>
+                                </select>
+                                </fieldset>
+                            </form>
+
+                            <ul>
+                                <li>
+                                    <span class="is-collapsible is-open">Projects</span>
+                                    <ul class="collapsible-target">
+                                        <li><a href="#">Project 1</a></li>
+                                        <li><a href="#">Project 2</a></li>
+                                        <li><a href="#">Project 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "What" -->
+
+                    <!-- START : Menu "Sections"  NOTE : not visible on the dashboard page
+                    <div class="menu sections">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Sections</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul class="selectable">
+                                <li class="selected"><a href="#section-prod-id">Product Identification</a></li>
+                                <li><a href="#section-trace">Raw Material Traceability</a></li>
+                                <li><a href="#section-prod-coding">Product coding</a></li>
+                                <li><a href="#section-storage">Storage</a></li>
+                                <li><a href="#section-phys-char">Physical characteristics</a></li>
+                                <li><a href="#section-chem-char">Chemical characteristics</a></li>
+                                <li><a href="#section-micro-char">Microbiological characteristics</a></li>
+                                <li><a href="#section-orga-char">Organoleptic characteristics</a></li>
+                                <li><a href="#section-allergens">Allergens</a></li>
+                                <li><a href="#section-nutrition">Nutrition</a></li>
+                                <li><a href="#section-formula">Formula</a></li>
+                                <li><a href="#section-certifs">Certifications</a></li>
+                                <li><a href="#section-label-other">Labeling - Other panel</a></li>
+                                <li><a href="#section-label-product-info">Labeling - Product information panel</a></li>
+                                <li><a href="#section-label-display">Labeling - Product display panel</a></li>
+                                <li><a href="#section-packaging">Packaging</a></li>
+                                <li><a href="#section-manufacturer-id">Manufacturer Identification</a></li>
+                                <li><a href="#section-attachments">Attachments</a></li>
+                                <li><a href="#section-questions">Questions</a></li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <!-- END : Menu "Sections" -->
+
+                    <!-- START : Menu "How" -->
+                    <div class="menu how">
+                        <h3 class="menu-title is-collapsible is-open">
+                            <span>Actions</span>
+                        </h3>
+                        <div class="menu-content-wrapper collapsible-target">
+                            <ul>
+                                <li><a href="#" id="create-user">Create a new project</a></li>
+                                <!--
+                                <li><a href="#">Save</a></li>
+                                <li><a href="#">Cancel</a></li>
+                                -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END : Menu "How" -->
+
+                </div>
+            </aside>
+            <!-- START : Sidebar -->
+
+        </div>
+
+        <!-- build:js /scripts/libraries/jquery.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.core.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.widget.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.mouse.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.position.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.draggable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.resizable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.sortable.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.autocomplete.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.button.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.datepicker.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.dialog.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.menu.min.js"></script>
+        <script src="/bower_components/jquery-ui/ui/minified/jquery.ui.tooltip.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js /scripts/libraries/kendo.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/kendo-ui/js/kendo.web.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js /scripts/libraries/libs.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/mustache/mustache.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- TODO : remove during integration -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.5.3/jquery.mockjax.min.js"></script>
+
+        <script src="/scripts/smartResize.js"></script>
+        <script src="/scripts/namespace.js"></script>
+        <script src="/scripts/layout.js"></script>
+        <script src="/scripts/collapsible.js"></script>
+        <script src="/scripts/selectable.js"></script>
+        <script src="/scripts/popinFieldEditor.js"></script>
+        <script src="/scripts/tagList.js"></script>
+        <script src="/scripts/popinAllergensEditor.js"></script>
+        <script src="/scripts/attachmentsPopin.js"></script>
+        <script src="/scripts/languageSelector.js"></script>
+
+        <script src="/scripts/sanitizeHTML.js"></script>
+
+
+        <div id="dialog-form" class="dialog" title="Create a new project">
+            <form>
+                <fieldset class="section no-border">
+                    <p class="field column">
+                        <label for="projectName">Project name : </label>
+                        <input type="text" class="large" name="projectName" id="projectName" value="">
+                    </p>
+                    <p class="field column">
+                        <label for="projectType">Password : </label>
+                        <select name="projectType" id="projectType">
+                            <option value="1">Raw material</option>
+                            <option value="2">Raw material composite</option>
+                            <option value="3">Attachments</option>
+                        </select>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+
+        <script>
+
+        //on page load
+        $(function () {
+            //setup layout scripts
+            TraceOne.layout.init({
+                elems : {
+                    layout: "#l-layout",
+                    header : "#l-header",
+                    main: "#l-main",
+                    mainContent: "#l-main-content",
+                    sidebar : "#l-sidebar",
+                    menuToggle : "#menuToggle"
+                },
+                menuIsVisibleClass : "menu-is-visible",
+                headerMenuItemClass : ".nav-bar-item"
+            });
+
+            //setup sidebar menu scripts
+            TraceOne.collapsible.init({
+                targetClass : "collapsible-target", //elem that will be collapsed
+                collapsibleClass : "is-collapsible", //elem that we attach the handler on
+                onChangeCallbacks : []
+            });
+
+            //setup selectable menu scripts
+            TraceOne.selectable.init({
+                selectableClass: "div.menu .selectable > li",
+                onChangeCallbacks : []
+            });
+
+            $("#grid-customers").kendoGrid({
+                dataSource: {
+                    type: "odata",
+                    serverPaging: true,
+                    serverSorting: true,
+                    sort: { field: "OrderID", dir: "desc" },
+                    pageSize: 5,
+                    transport: {
+                        read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
+                    }
+                },
+                pageSize: 5,
+                selectable: "row",
+                sortable: {
+                    allowUnsort: false
+                },
+                columns: [
+                    {
+                        field: "OrderID", title: "Order ID", width: 60,
+                        template: function(data) {
+                            return "<a href=#>" + data.OrderID + "</a>";
+                        }
+                    },
+                    { field: "CustomerID", title: "Customer ID", width: 90}
+                ]
+            });
+
+            $("#dialog-form").dialog({
+                autoOpen: false,
+                width: 500,
+                modal: true,
+                buttons: {
+                    OK: function() {
+                        /*
+                        TODO :
+                            post the data
+                            create new project
+                                If error
+                                    show error in popin
+                                if no error
+                                    close popin
+                                    refresh parent window
+                        */
+                        $(this).dialog("close");
+                    },
+                    Cancel: function() {
+                        $(this).dialog("close");
+                    }
+                },
+                close: function() {
+                    allFields.val("").removeClass("ui-state-error");
+                }
+            });
+
+            $("#create-user").click(function() {
+                $("#dialog-form").dialog("open");
+            });
+
+            TraceOne.LanguageSelector.Init({
+                languageSelectorContainer: "div#language-selector"
+            });
+
+        });
+        </script>
+
+</body>
+</html>

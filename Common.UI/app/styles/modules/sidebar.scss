@@ -1,0 +1,342 @@
+// Compass modules
+//@import "compass/css3/text-shadow";
+//@import "compass/css3/border-radius";
+//@import "compass/utilities";
+
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+.menu {
+    //so margins of last element will be taken into account
+    overflow:visible;
+    margin-top : 18px;
+    .menu-title {
+        padding : 9px 5px 10px 5px;
+        margin : 0;
+        cursor:pointer;
+        > span {
+            color : $menu-title-color;
+            border-bottom: $menu-title-border;
+            @include set-font-size(18px);
+            font-weight:normal;
+            text-transform:uppercase;
+            display : block;
+        }
+    }
+    
+    ol, ul {
+        margin : 0 0 0 12px;
+        padding : 0;
+        list-style-type:none;
+        
+        li {
+            padding-left : 50px;
+            padding-right: 11px;
+            color : $menu-link-color;
+            font-weight:normal;
+            @include set-font-size(14px);
+            
+            ol, ul {
+                background: none;
+                li {
+                    padding-left : 15px;
+                }
+                .selected {
+                    margin-left: -62px;
+                    padding-left: 77px;
+                }
+            }
+            
+        }
+        
+        a {
+            color : $menu-link-color;
+            padding : 3px 3px 3px 0;
+            text-decoration:none;
+            &:hover {
+                color : $menu-link-hover-color;
+                text-decoration:none;
+//                @include text-shadow(
+//                    rgba(#8a8a8a, 0.5) 1px 1px 1px
+//                );
+                text-shadow: rgba(138, 138, 138, 0.5) 1px 1px 1px;
+            }
+        }
+        
+        //single-text-shadow($hoff, $voff, $blur, $spread, $color)
+
+        span {
+            color : $menu-link-color;
+            padding : 3px 3px 3px 0;
+            text-decoration:none;
+        }
+
+        .selected {
+            > a, 
+            > span {
+                text-decoration:none;
+                color : $menu-link-hover-color;
+                font-weight: bold;
+//                @include text-shadow(
+//                    rgba(#8a8a8a, 0.5) 1px 1px 1px
+//                );
+                text-shadow: rgba(138, 138, 138, 0.5) 1px 1px 1px;
+            }
+        }
+
+    }
+    
+}
+
+.search-box-field {    
+    color : $field-input-color; 
+    border : $field-input-border;
+    width: 285px;
+    //@include border-radius(3px);
+    border-radius: 3px;
+    padding : 3px 2px 3px 2px;
+    &:focus {
+        border : $field-input-focus-border;
+        outline: none;
+    }
+}
+
+.search-box-button {
+    vertical-align: middle;
+    padding: 0 0 2px 5px;
+}
+
+.state-holder {
+    display: block;
+    //@include float(right);
+    float: right;
+    margin-right: 5px;
+    min-width: 20px;
+}
+
+
+//specific styles for each menu
+.where {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-where.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-where.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-where.png") transparent no-repeat;
+        }
+        ol, ul {    
+            .selected {
+                background : url("../../img/bg/bg-tree-branch-where-l2.png") transparent no-repeat;
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-where-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+.who {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-who.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-who.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-who.png") transparent no-repeat;
+        }
+        ol, ul {    
+            .selected {
+                background : url("../../img/bg/bg-tree-branch-who-l2.png") transparent no-repeat;
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-who-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+.what {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-what.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-what.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-what.png") transparent no-repeat;
+        }
+        ol, ul {    
+            .selected {
+                background : url("../../img/bg/bg-tree-branch-what-l2.png") transparent no-repeat;
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-what-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+.when {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-when.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-when.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-when.png") transparent no-repeat;
+        }
+        ol, ul {    
+            .selected {
+                background : url("../../img/bg/bg-tree-branch-when-l2.png") transparent no-repeat;
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-when-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+.how {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-how.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-how.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-how.png") transparent no-repeat;
+        }
+        ol, ul {    
+            .selected {
+                background : url("../../img/bg/bg-tree-branch-how-l2.png") transparent no-repeat;
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-how-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+
+//specific for "action/wizard" menu
+.action-steps {
+    margin : 0;
+    padding : 0;
+    li {
+        padding : 2px 0;
+        
+    }
+    .step {
+        padding-left : 75px;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-how-l2.png") transparent no-repeat;
+        }
+    }
+    .sub-menu-title {
+        margin-bottom: 15px;
+        font-style:italic;
+    }
+}
+
+.action-steps li a:before {
+    content : "";
+    font-size : 28px;
+    font-weight:bold;
+    color : #CCC;
+    padding : 5px;
+    padding: 5px 10px 0 0;
+    vertical-align: middle;
+}
+
+.action-steps li a:hover,
+.action-steps li a:hover:before,
+.action-steps li.selected a,
+.action-steps li.selected a:before {
+    color : #333;
+    text-decoration:none;
+}
+
+/* we always have a "title" li (non-step), so raise the index by one */
+.action-steps li:nth-of-type(2) a:before {
+    content : "1";
+}
+.action-steps li:nth-of-type(3) a:before {
+    content : "2";
+}
+.action-steps li:nth-of-type(4) a:before {
+    content : "3";
+}
+
+/* cancel button */
+.action-steps li:nth-last-of-type(1) a {
+    padding-left : 18px;
+    background : url("../../img/ico/ico-cancel.png") transparent 0 center no-repeat;
+}
+
+/* save button */
+.action-steps li:nth-last-of-type(2) {
+    margin-top: 15px;
+}
+.action-steps li:nth-last-of-type(2) a {
+    padding-left : 18px;
+    background : url("../../img/ico/ico-validate.png") transparent 0 center no-repeat;
+}
+
+.sections {
+    > .menu-title {
+        padding-left: 55px;
+        background : #FFF url("../../img/ico/ico-sections.png") no-repeat 0 0;
+    }
+    ol, ul {
+        background : url("../../img/bg/bg-tree-sections.png") transparent repeat-y;
+        .selected {
+            background : url("../../img/bg/bg-tree-branch-sections.png") transparent no-repeat;
+            ol, ul {    
+                .selected {
+                    background : url("../../img/bg/bg-tree-branch-sections-l2.png") transparent no-repeat;
+                }
+            }
+        }
+    }
+    &:hover {
+        > .menu-title {
+            background : #FFF url("../../img/ico/ico-sections-hover.png") no-repeat 0 0;
+        }
+    }
+}
+
+// MODULE viewer 
+.viewer {
+    fieldset {
+        border : none;
+        padding: 0;
+        margin : 5px 10px 10px;
+        .viewer-bt {
+            //@include float(left);
+            float: left;
+        }
+        .viewer-select {
+            //@include float(left);
+            float: left;
+            margin-left : 5px;
+            color : $menu-viewer-color;
+            @include set-font-size(13px);
+        }
+    }
+}

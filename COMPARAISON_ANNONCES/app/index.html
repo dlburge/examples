@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>index</title>
+	<meta name="description" content="" />
+	<meta name="author" content="david.burge" />
+	<link rel="stylesheet" href="css/screen.css"/>
+    <script src="libs/mustache.js" charset="utf-8"></script>
+    <script src="libs/d3.v3.js" charset="utf-8"></script>
+	<script src="js/dist/SL.comparaison.annonces.js"></script>
+</head>
+<body>
+<form>
+	<div id="content">
+        <div id="radar"></div>
+        <ul id="controls"></ul>
+    </div>
+</form>
+</body>
+<script type="text/javascript">
+var listings = [
+    {
+        "idannonce":81094481,
+        "nbPieces":"4pieces",
+        "nbChambres":"2chambres",
+        "pxz":"489000",
+        "surface":"90",
+        "commodites":"sans vis a vis/toilettes separees/placard rangement/calme",
+        "_score":"5",
+        "label":"Appartement 4 pièces Paris 19ème (75019) - 90m² - 489 000 €"
+    },
+    {
+        "idannonce":81094555,
+        "nbPieces":"2pieces",
+        "nbChambres":"1chambres",
+        "pxz":"395000",
+        "surface":"40",
+        "commodites":"sejour/placard rangement/calme",
+        "_score":"3",
+        "label":"Appartement 2 pièces Paris 11ème (75011) - Quartier République-Saint Ambroise - 40m² - 395 000 €"
+    },
+    {
+        "idannonce":81094493,
+        "nbPieces":"2pieces",
+        "nbChambres":"1chambres",
+        "pxz":"484000",
+        "surface":"60",
+        "commodites":"sejour/cave/interphone/placard rangement/entree",
+        "_score":"8",
+        "label":"Appartement 2 pièces Paris 19ème (75019) - Quartier Buttes Chaumont - 60m² - 484 000 €"
+    },
+    {
+        "idannonce":81094509,
+        "nbPieces":"3pieces",
+        "nbChambres":"2chambres",
+        "pxz":"430000",
+        "surface":"67",
+        "commodites":"interphone",
+        "_score":"10",
+        "label":"Appartement 3 pièces Paris 20ème (75020) - Quartier Télégraphe-Pelleport Saint Fargeau - 67m² - 430 000 €"
+    }
+];
+
+var axis = [
+    {
+        "label":"Pièces",
+        "dataField":"nbPieces"
+    },
+    {
+        "label":"Chambres",
+        "dataField":"nbChambres"
+    },
+    {
+        "label":"Prix",
+        "dataField":"pxz"
+    },
+    {
+        "label":"Surface",
+        "dataField":"surface"
+    }/*,
+    {
+        "label":"Score",
+        "dataField":"_score"
+    }*/
+];
+
+SelogerUI.RadarChart.init({
+    container: "#radar",
+    data: listings,
+    axis: axis,
+    controlsContainer: "#controls"
+});
+</script>
+</html>

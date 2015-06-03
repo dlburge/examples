@@ -1,0 +1,21 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* import reset file */
+@import "compass/reset";
+
+/* import utilities */
+@import "compass/utilities"; 
+
+/* import css3 */ 
+@import "compass/css3";
+ 
+/* text replacement */
+@import "compass/typography/text/replacement";
+
+/* import colors, polices, etc. *//***/
+@import "base";
+
+@import "display";

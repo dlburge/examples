@@ -1,0 +1,55 @@
+/** Language selector **/
+.language-selector {
+    font-weight:normal;
+    position : relative;
+    z-index: 5;
+    background-color : #FFF;
+    margin: 5px 4px 0 3px;
+}
+
+.language-selector ul {
+    margin : 0;
+    padding : 0;
+    border: solid 1px #ddd;
+    background-color : #FFF;
+    
+    li {
+    
+        border : none;
+        border-bottom : none;
+        
+        display: none;
+        margin : 0;
+        
+        &.active-language {
+            display:block;
+        }
+        &:hover {
+            background-color : #e0fcff;
+        }
+        a {
+            padding: 3px 15px 3px 5px;
+            display: block;
+            margin-right: 5px;
+            text-transform: capitalize;
+        }
+        
+        .fr-FR {
+            background: transparent url("../../img/ico/ico-flag-fr-fr.png") no-repeat right center;
+        }
+        .en-US {
+            background: transparent url("../../img/ico/ico-flag-en-us.png") no-repeat right center;
+        }
+        .de-DE {
+            background: transparent url("../../img/ico/ico-flag-de-de.png") no-repeat right center;
+        }
+    }
+    &.is-open {
+        li {
+            display: block;
+            &.active-language {
+                background-color : #f2f2f2;
+            }
+        }
+    }
+}

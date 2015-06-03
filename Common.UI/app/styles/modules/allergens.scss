@@ -1,0 +1,106 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+//specific for allergens
+.editable-table.allergens {
+    border-collapse: collapse;
+    th,
+    td {
+        //width : 20%; //equal width for columns
+        &:first-child {
+            //width:28%;
+            white-space:normal;
+            width : 250px;
+        }
+    }
+    td {
+        vertical-align: top;
+        &:first-child + td {
+            .check-mark {
+                color : #ddd; //change color for checkmark in "hot present" column (2nd td)
+            }
+        }
+    }
+
+    input[type="text"]{
+        display: block;
+        margin : 1px auto; //align center of column
+    }
+
+    .column-item-detail {
+        display: block;
+        color: #ccc;
+        margin: 15px 0 2px 15px;
+        font-weight: normal;
+    }
+
+    .check-mark,
+    .exclamation-mark {
+        @include set-font-size(24px);
+        color : #333;
+        font-weight:bold;
+        display:block;
+    }
+
+    .exclamation-mark {
+        color : red;
+    }
+
+    .value {
+        @include set-font-size(12px, 0.5);
+        font-weight:normal;
+        display:block;
+        margin : 1px 0 2px 0;
+        text-align: center;
+        &.not-published:before {
+            content : "!";
+            font-weight:bold;
+            color : red;
+            padding-right : 3px;
+        }
+    }
+
+    .item-present {
+        color : #333;
+        font-weight:bold;
+
+        border-bottom: solid 1px #ddd;
+
+        .tag-cloud {
+            margin-top : 0;
+        }
+    }
+
+}
+
+.editable-table.allergens.edit {
+    th, td {
+        text-align: center;
+        width: 20%;
+        &:first-child {
+            text-align: left;
+        }
+    }
+
+    .ingredient-values {
+        margin-top: 18px;
+        display: block;
+        border: solid 1px #ddd;
+        background-color: #FFF;
+        white-space: nowrap;
+        padding: 2px 4px;
+        color: #333;
+
+        &:hover {
+            border-color : #9ceaf1;
+        }
+        .value {
+            margin : 2px 0;
+            text-align: left;
+        }
+
+    }
+
+}

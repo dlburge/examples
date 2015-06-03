@@ -1,0 +1,46 @@
+@mixin position-fixed {
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+@mixin simple-border($offset-x:0, $border-color:#ccc){
+    &:after {
+        box-shadow: 0 1px 0 0 $border-color;
+        content: "-";
+        display: block;
+        font-size: 1px;
+        line-height: 1px;
+        color: transparent;
+        margin-top: 0;
+        margin-left: $offset-x;
+    }
+}
+
+@mixin double-border($offset-x:0, $border-color:#ccc){
+    &:after {
+        box-shadow: 0 6px 0 0 $border-color, 0 8px 0 0 white, 0 9px 0 0 $border-color;
+        content: "-";
+        display: block;
+        font-size: 1px;
+        line-height: 1px;
+        color: transparent;
+        margin-top: 0;
+        margin-left: $offset-x;
+    }
+}
+
+
+@mixin triple-border($offset-x:0, $border-color:#ccc){
+    &:after {
+        box-shadow: 0 6px 0 0 $border-color, 0 8px 0 0 white, 0 9px 0 0 $border-color, 0 11px 0 0 white, 0 12px 0 0 $border-color;
+        content: "-";
+        display: block;
+        font-size: 1px;
+        line-height: 1px;
+        color: transparent;
+        margin-top: 0;
+        margin-left: $offset-x;
+    }
+}

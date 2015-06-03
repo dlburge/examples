@@ -1,0 +1,306 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+.editable-table {
+    @include set-font-size(12px, 0.75);
+    padding : 0;
+    margin : 7px 0 10px 0;
+
+    .highlight {
+        background-color: $table-col-highlight-background;
+        border-left : $table-col-highlight-border;
+        border-right : $table-col-highlight-border;
+    }
+
+    .highlight-title {
+        font-weight: bold;
+    }
+
+    .collapse-all-rows {
+        color : #999;
+        @include set-font-size(10px, 0.5);
+        padding : 2px 4px;
+    }
+
+    .category {
+        background: repeating-linear-gradient(-45deg, #f2f2f2, #f2f2f2 2px, white 2px, white 4px);
+        //TODO : find gradient equivalent for IE8+
+        background-size:cover;
+        .category-title {
+            background : none;
+            background-color : #FFF;
+            text-transform:uppercase;
+            font-weight:bold;
+            white-space: nowrap;
+        }
+        .empty {
+            background-color : #FFF;
+        }
+        &:hover {
+            .empty {
+                background-color : #FFF;
+            }
+        }
+    }
+
+    .new-row {
+        //@include background(repeating-linear-gradient(-45deg, #f2f2f2, #f2f2f2 2px, #ffffff 2px, #ffffff 4px));
+        background: repeating-linear-gradient(-45deg, #f2f2f2, #f2f2f2 2px, white 2px, white 4px);
+        //TODO : find gradient equivalent for IE8+
+        background-size:cover;
+    }
+
+    .total {
+        background-color: #FFF;
+        &:hover {
+            background-color: #FFF;
+        }
+        td {
+            padding : 5px;
+            text-align:left;
+            a {
+                color : #809913;
+                text-decoration:underline;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+        .total-title {
+            text-transform:uppercase;
+            padding-left: 15px;
+        }
+    }
+
+
+    .child-row {
+        border-bottom : none;
+        border-top : none;
+        color : #999;
+        @include set-font-size(10px, 0.5);
+        td {
+            &:first-child {
+                padding-left : 15px;
+                white-space:nowrap;
+            }
+        }
+        td {
+            border-bottom : none;
+        }
+    }
+
+    .child-row-l2 {
+        color : #CACACA; //TODO : different than defined in Axure, #D7D7D7. Which is too light.
+        td {
+            &:first-child {
+                padding-left : 30px;
+                white-space:nowrap;
+            }
+        }
+    }
+
+    thead {
+        border-bottom: $table-head-border;
+        tr {
+            color: $table-head-color;
+            th {
+                padding: 5px;
+                font-weight:normal;
+                &:first-child {
+                    //text-align:left;
+                }
+            }
+            &:first-child {
+                border-bottom: solid 1px #fff;
+            }
+        }
+    }
+    tbody {
+        tr {
+            border-bottom: $table-row-border;
+            color : $table-row-color;
+            &:hover {
+                background-color: rgba(13,146,238, 0.07);
+                .delete-row {
+                    background-color: #eef8fe;
+                    img {
+                        visibility:visible;
+                    }
+                }
+                .empty {
+                    background-color : transparent;
+                }
+            }
+
+            td {
+                padding: 5px;
+                text-align:center;
+                input[type=text], select, textarea {
+                    vertical-align:top;
+                    color : $field-input-color;
+                    border : $field-input-border;
+                    //@include border-radius(3px);
+                    border-radius: 3px;
+                    padding : 3px 2px;
+                    &:focus {
+                        border : $field-input-focus-border;
+                        outline: none;
+                    }
+                }
+                select {
+                    padding : 2px;
+                }
+                &:first-child {
+                    text-align:left;
+                }
+            }
+
+            .delete-row {
+                position: absolute;
+                left: 10px;
+
+                padding: 5px 5px 5px 10px;
+                border-radius: 5px 0 0 5px;
+                display:inline-block;
+                height: 33px;
+                border-bottom:none;
+                img {
+                    visibility:hidden;
+                    width : auto;
+                    height: auto;
+                    border : none;
+                    padding : 4px 2px;
+                    margin : 0;
+                }
+            }
+
+            .empty {
+                background-color : transparent;
+                height : auto;
+                visibility: visible;
+                left: 15px;
+                border-radius: 0;
+            }
+
+        }
+        .is-collapsible {
+            border-bottom:none;
+            cursor:pointer;
+            td {
+                border-bottom:none;
+                cursor:pointer;
+            }
+        }
+    }
+
+    .column-separator {
+        font-size : 1.75em;
+    }
+
+}
+
+//in edit mode
+.editable-table.edit {
+    td, th {
+        &:nth-child(2) {
+            text-align:left;
+        }
+    }
+    tfoot {
+
+        a {
+            color:#809913;
+            padding : 5px;
+            text-align: left;
+            display:inline-block;
+            &:hover {
+                color:#809913;
+                text-decoration: none;
+            }
+        }
+
+        tr {
+            display:table-row;
+        }
+    }
+    .child-row {
+        td {
+            &:nth-child(2) {
+                padding-left : 15px;
+                white-space:nowrap;
+            }
+        }
+    }
+    .child-row-l2 {
+        td {
+            &:nth-child(2) {
+                padding-left : 30px;
+                white-space:nowrap;
+            }
+        }
+    }
+}
+
+.popinEditor {
+
+    padding : 10px 0;
+    position : absolute;
+    z-index : 9999;
+    background-color : #FFF;
+    border : solid 2px #ddd;
+    box-shadow: 3px 3px 6px #eee;
+
+    .arrow {
+        position: absolute;
+        top:-13px;
+        left: 48%;
+    }
+
+    fieldset {
+        border: none;
+    }
+    .field {
+        float:left;
+        margin : 5px;
+        label {
+            width: auto;
+            display: block;
+            text-align: center;
+            margin: 5px auto;
+        }
+        input, select {
+            width : 50px;
+            margin-left : 5px;
+        }
+    }
+
+    .editable-table .delete-row {
+        position : inherit;
+    }
+
+    .actions {
+        display: block;
+        clear : both;
+        padding-top : 20px;
+        margin:0;
+        text-align : center;
+        button {
+            color : #809913;
+            background-color : #FFF;
+            border : solid 1px #e4e4e4;
+            //@include border-radius(3px);
+            border-radius: 3px;
+            padding : 3px 10px;
+            margin-left : 5px;
+        }
+        button[type="submit"]{
+            font-weight : bold;
+        }
+        button[type="reset"]{
+            background-color: #EEE;
+            padding-bottom : 4px;
+        }
+    }
+}

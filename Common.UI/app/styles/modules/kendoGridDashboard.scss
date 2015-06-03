@@ -1,0 +1,67 @@
+/* Base variables and mixins */
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_ry5n-vertical-rhythm";
+
+.k-grid,
+.widget-split-vertical {
+    border: 0;
+}
+
+.k-grid 
+.k-grid-header {
+    font-size: .875em;
+    line-height: 1.71429em;
+    
+    @include set-font-size(14px);
+    
+    background: 0 0;
+    border: 0;
+    box-shadow: 0 1px 0 0 #ccc, 0 3px 0 0 white, 0 4px 0 0 #ccc;
+}
+
+.k-grid .k-grid-header 
+.k-grid-header-wrap {
+    border: 0;
+}
+
+.k-grid .k-grid-header .k-header {
+    border: 0;
+    background: 0 0;
+    box-shadow: 0 1px 0 0 #ccc, 0 3px 0 0 white, 0 4px 0 0 #ccc;
+    color: #999;
+}
+
+.k-grid .k-grid-header .k-link {
+    color: #999;
+}
+
+.k-grid tbody {
+    font-size: .75em;
+    line-height: 2em;
+    
+    
+    @include set-font-size(12px);
+    
+    color: #333;
+}
+
+.k-grid-content {
+    padding-top:1px;
+}
+
+.k-scrollbar-vertical {
+    border-right: $general-border;
+}
+
+.k-grid tbody td a {
+  text-decoration: underline;
+  color: #2c6ab3;
+}
+
+
+.k-grid tbody .k-state-selected td a {
+  text-decoration: underline;
+  color: #fff;
+}
+

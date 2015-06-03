@@ -1,0 +1,158 @@
+//TODO : use image-url() and sprites
+
+.menu-is-visible .l-sidebar {
+    margin-right: 0;
+}
+
+.menu-is-visible .l-main .l-main-content {
+    margin-right: $sidebar-width;
+}
+
+//generic fixed position class
+.is-fixed {
+    @include position-fixed;
+}
+
+.is-hidden {
+    display:none;
+    visibility: hidden;
+}
+
+.is-invitation-accepted {
+    > span {
+        background: url("../../img/ico/ico-validate.png") transparent no-repeat right center;
+        padding-right : 20px;
+    }
+}
+.is-invitation-pending {
+    > span {
+        background: url("../../img/ico/ico-alert.png") transparent no-repeat right center;
+        padding-right : 20px;
+    }
+}
+
+.menu {
+    .is-open {
+        > span {
+            background: url("../../img/ico/ico-close.png") #FFF no-repeat 95% center;
+            padding-right : 20px;
+        }
+    }
+    .is-closed {
+        > span {
+            background: url("../../img/ico/ico-open.png") #FFF no-repeat 95% center;
+            padding-right : 20px;
+        }
+    }
+    
+    ol, ul {
+        .is-open {
+            padding-left: 15px;
+            background: url("../../img/ico/ico-open-menu-item.png") #FFF no-repeat 0 center;
+        }
+    }
+
+    ol, ul {
+        .is-closed {
+            padding-left: 15px;
+            background: url("../../img/ico/ico-closed-menu-item.png") #FFF no-repeat 0 center;
+        }
+    }
+    
+}
+
+//override open/closed (used in collapsible.js) for different levels of indentation
+.is-open.level-1 {
+    background-image: url("../../img/ico/ico-open-l1.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+
+.is-closed.level-1 {;
+    background-image: url("../../img/ico/ico-closed-l1.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+
+.is-open.level-2 {
+    background-image: url("../../img/ico/ico-open-l2.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+.is-closed.level-2 {
+    background-image: url("../../img/ico/ico-closed-l2.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+
+.is-open.level-3 {
+    background-image: url("../../img/ico/ico-open-l3.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+.is-closed.level-3 {
+    background-image: url("../../img/ico/ico-closed-l3.png");
+    background-position: 13px center;
+    background-repeat: no-repeat;
+}
+
+/* Apply the image to the first child and not directly on the element */
+.is-open.level-3-child {
+    background: transparent;
+    .ico-holder {
+        background: url("../../img/ico/ico-open-l3.png") no-repeat 97% center;
+        padding-right : 20px; 
+    }
+}
+/* Apply the image to the first child and not directly on the element */
+.is-closed.level-3-child { 
+    background: transparent;
+    .ico-holder {
+        background: url("../../img/ico/ico-closed-l3.png") no-repeat 97% center;
+        padding-right : 20px;
+    }
+}
+
+
+.is-open.level-4 {
+    background: url("../../img/ico/ico-open-l4.png") no-repeat 97% center;     
+    padding-right : 20px;
+}
+
+.is-closed.level-4 {
+    background: url("../../img/ico/ico-open-l4.png") no-repeat 97% center; 
+    padding-right : 20px;
+}
+
+/* Apply the image to the first child and not directly on the element */
+.is-open.level-4-child {
+    background: transparent;
+    .ico-holder {
+        background: url("../../img/ico/ico-open-l4.png") no-repeat 97% center;
+        padding-right : 20px;
+    }
+}
+/* Apply the image to the first child and not directly on the element */
+//TODO : the element td, etc. is too specific
+.is-closed.level-4-child { 
+    background: transparent;
+    .ico-holder {
+        background: url("../../img/ico/ico-closed-l4.png") no-repeat 97% center;
+        padding-right : 20px;
+    }
+}
+
+
+//specific for "add components" page
+.is-ghost {
+    font-style:italic;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* Loading image for autocomplete fields */
+.ui-autocomplete-loading {
+   background: url('../../img/ajax-loader.gif') no-repeat right center;
+}
